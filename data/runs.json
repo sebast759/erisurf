@@ -1,5 +1,12 @@
 [
  {
+  "run_id": 302,
+  "day": "2026-10-29",
+  "time": "07:41",
+  "slot": "sunrise",
+  "spots": []
+ },
+ {
   "run_id": 301,
   "day": "2026-10-28",
   "time": "18:41",
@@ -1604,94 +1611,6 @@
     "people": 5,
     "note": "dumpy shorebreak sections; ~2 out at the far edge, approximate",
     "erisurf": 3
-   }
-  ]
- },
- {
-  "run_id": 282,
-  "day": "2026-10-25",
-  "time": "07:41",
-  "slot": "sunrise",
-  "spots": [
-   {
-    "spot": "Ribeira",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 2.0,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 3,
-    "wind_gust": 5,
-    "wind_dir": "N",
-    "surfers": 10,
-    "people": 8,
-    "note": "glassy, clean lines peeling down the point, riders on waves; ~10 out on close-up, more paddling out",
-    "erisurf": 4.5
-   },
-   {
-    "spot": "Norte",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 2.0,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 3,
-    "wind_gust": 5,
-    "wind_dir": "N",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast only",
-    "erisurf": 3
-   },
-   {
-    "spot": "Sul",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 2.0,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 3,
-    "wind_gust": 5,
-    "wind_dir": "N",
-    "surfers": 2,
-    "people": null,
-    "note": "lefts peeling off the reef, some sectioning; 2 out on detail crop",
-    "erisurf": 3.5
-   },
-   {
-    "spot": "Pedra",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 2.0,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 3,
-    "wind_gust": 5,
-    "wind_dir": "N",
-    "surfers": null,
-    "people": null,
-    "note": "dawn haze over the reef, peeling whitewater; nobody resolvable, forecast stands",
-    "erisurf": 3
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 2.0,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 3,
-    "wind_gust": 5,
-    "wind_dir": "N",
-    "surfers": 0,
-    "people": 0,
-    "note": "shorebreak only, dumping on the sand; 0 out on detail crop, empty beach",
-    "erisurf": 2.5
    }
   ]
  }

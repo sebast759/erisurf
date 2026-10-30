@@ -1,5 +1,45 @@
 [
  {
+  "run_id": 307,
+  "day": "2026-10-30",
+  "time": "07:41",
+  "slot": "sunrise",
+  "spots": [
+   {
+    "spot": "Norte",
+    "rating": "FAIR",
+    "surf_min": 0.6,
+    "surf_max": 0.9,
+    "swell_h": 0.8,
+    "swell_p": 10,
+    "swell_dir": "NNW",
+    "wind_kts": 9,
+    "wind_gust": 10,
+    "wind_dir": "NNE",
+    "surfers": null,
+    "people": null,
+    "note": "no camera frames this run; forecast only",
+    "erisurf": 3
+   },
+   {
+    "spot": "Sul",
+    "rating": "FAIR",
+    "surf_min": 0.6,
+    "surf_max": 0.9,
+    "swell_h": 0.8,
+    "swell_p": 10,
+    "swell_dir": "NNW",
+    "wind_kts": 9,
+    "wind_gust": 10,
+    "wind_dir": "NNE",
+    "surfers": 0,
+    "people": null,
+    "note": "near-flat at dawn, only wash on the point rocks; nobody out on detail crop",
+    "erisurf": 2
+   }
+  ]
+ },
+ {
   "run_id": 306,
   "day": "2026-10-29",
   "time": "18:41",
@@ -1523,94 +1563,6 @@
     "people": 1,
     "note": "heavy shorebreak dumping on sand; nobody out on readable detail crop",
     "erisurf": 2.5
-   }
-  ]
- },
- {
-  "run_id": 287,
-  "day": "2026-10-26",
-  "time": "07:41",
-  "slot": "sunrise",
-  "spots": [
-   {
-    "spot": "Ribeira",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 2.0,
-    "swell_h": 2.3,
-    "swell_p": 14,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "NE",
-    "surfers": 3,
-    "people": 2,
-    "note": "clean low-tide lines, glassy offshore; ~3 out on detail/crowd crops, close-up too dim to add more",
-    "erisurf": 4.5
-   },
-   {
-    "spot": "Norte",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 2.0,
-    "swell_h": 2.2,
-    "swell_p": 14,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "NE",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast only",
-    "erisurf": 3.5
-   },
-   {
-    "spot": "Sul",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 2.0,
-    "swell_h": 2.2,
-    "swell_p": 14,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "NE",
-    "surfers": 3,
-    "people": null,
-    "note": "clean lines peeling off point, dawn haze; ~3 out on detail crop",
-    "erisurf": 4.5
-   },
-   {
-    "spot": "Pedra",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.5,
-    "surf_max": 2.1,
-    "swell_h": 2.3,
-    "swell_p": 14,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "NE",
-    "surfers": 0,
-    "people": 2,
-    "note": "low tide, inside crumbling over shallow reef; empty dawn lineup, not docked",
-    "erisurf": 3.5
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.5,
-    "surf_max": 2.1,
-    "swell_h": 2.2,
-    "swell_p": 14,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "NE",
-    "surfers": 0,
-    "people": 0,
-    "note": "clean peeling lines, offshore; nobody out at dawn on readable detail crop",
-    "erisurf": 4
    }
   ]
  }

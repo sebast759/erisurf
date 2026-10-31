@@ -1,5 +1,29 @@
 [
  {
+  "run_id": 312,
+  "day": "2026-10-31",
+  "time": "07:41",
+  "slot": "sunrise",
+  "spots": [
+   {
+    "spot": "Ribeira",
+    "rating": "FAIR",
+    "surf_min": 1.2,
+    "surf_max": 1.8,
+    "swell_h": 1.6,
+    "swell_p": 12,
+    "swell_dir": "WNW",
+    "wind_kts": 6,
+    "wind_gust": 7,
+    "wind_dir": "NNE",
+    "surfers": 14,
+    "people": 0,
+    "note": "clean peeling lines, surfers paddling and on waves; ~14 out on close-up, sand empty",
+    "erisurf": 4
+   }
+  ]
+ },
+ {
   "run_id": 311,
   "day": "2026-10-30",
   "time": "18:41",
@@ -1474,94 +1498,6 @@
     "surfers": 0,
     "people": 5,
     "note": "shorebreak dumping on sand, water empty on detail and crowd crops; 0 out",
-    "erisurf": 2.5
-   }
-  ]
- },
- {
-  "run_id": 292,
-  "day": "2026-10-27",
-  "time": "07:41",
-  "slot": "sunrise",
-  "spots": [
-   {
-    "spot": "Ribeira",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 1.8,
-    "swell_p": 12,
-    "swell_dir": "WNW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "SSE",
-    "surfers": 8,
-    "people": 3,
-    "note": "clean lines peeling down the point, glassy dawn; ~8 out on close-up",
-    "erisurf": 4
-   },
-   {
-    "spot": "Norte",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 1.8,
-    "swell_p": 12,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "SSE",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast only",
-    "erisurf": 3.5
-   },
-   {
-    "spot": "Sul",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 1.8,
-    "swell_p": 12,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "SSE",
-    "surfers": 7,
-    "people": null,
-    "note": "clean lines peeling with green shoulders, light offshore; ~7 out",
-    "erisurf": 4.5
-   },
-   {
-    "spot": "Pedra",
-    "rating": "FAIR_TO_GOOD",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 1.8,
-    "swell_p": 12,
-    "swell_dir": "WNW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "SSE",
-    "surfers": 1,
-    "people": 1,
-    "note": "broad washy whitewater over reef, 1 sitting outside",
-    "erisurf": 4
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 1.8,
-    "swell_p": 12,
-    "swell_dir": "NW",
-    "wind_kts": 4,
-    "wind_gust": 4,
-    "wind_dir": "SSE",
-    "surfers": 0,
-    "people": 0,
-    "note": "long lines closing out on sand, beach and water empty",
     "erisurf": 2.5
    }
   ]

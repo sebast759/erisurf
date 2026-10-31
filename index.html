@@ -197,12 +197,13 @@ Wind drops 19 to 9 km/h by 07:00.
     // GoSurf copy did): no frames within 20s counts as a failure too
     var tm=setTimeout(function(){if(v.readyState<2)next();},20000);
     if(window.Hls&&Hls.isSupported()){
-      h=new Hls({lowLatencyMode:true}); v._h=h; h.loadSource(srcs[i]); h.attachMedia(v);
+      h=new Hls({lowLatencyMode:false,maxBufferLength:10,capLevelToPlayerSize:true,startFragPrefetch:true});
+      v._h=h; h.loadSource(srcs[i]); h.attachMedia(v);
       h.on(Hls.Events.ERROR,function(e,d){if(d.fatal)next();});
     }else if(v.canPlayType('application/vnd.apple.mpegurl')){
       v.onerror=next; v.src=srcs[i];
     }else{clearTimeout(tm);fail(tile);return;}
-    v.play().catch(function(){});
+    if(v._vis)v.play().catch(function(){});
   }
   function still(im){
     im.onerror=function(){fail(im.closest('.lcam'));};
@@ -218,10 +219,29 @@ Wind drops 19 to 9 km/h by 07:00.
     }else{el.removeAttribute('src');}
     el.closest('.lcam').classList.add('stopped');
   }
-  function show(el){
+  function near(el){
     if(el._stopped)return;
     if(el.tagName==='VIDEO'){
-      if(!el._on){el._on=1;load(el,0);}else{el.play().catch(function(){});}
+      if(!el._on&&window.Hls&&Hls.isSupported()){el._on=1;load(el,0);}
+    }else if(el.tagName==='IFRAME'){
+      if(!el.getAttribute('src'))el.src=el.dataset.embed;
+    }else if(!el.getAttribute('src'))still(el);
+  }
+  function far(el){
+    // an embed cannot be paused from here (other origin), so unload it;
+    // left alone while it is fullscreen, which also reads as off screen
+    if(el.tagName==='IFRAME'&&document.fullscreenElement!==el)el.removeAttribute('src');
+  }
+  function show(el){
+    if(el._stopped)return;
+    el._vis=1;
+    if(el.tagName==='VIDEO'){
+      if(!el._on){el._on=1;load(el,0);}else{
+        // buffered a while ago while paused: catch up with the live edge
+        var live=el._h&&el._h.liveSyncPosition;
+        if(live&&el.currentTime<live-15)el.currentTime=live;
+        el.play().catch(function(){});
+      }
     }else if(el.tagName==='IFRAME'){
       if(!el.getAttribute('src'))el.src=el.dataset.embed;
     }else{
@@ -231,12 +251,10 @@ Wind drops 19 to 9 km/h by 07:00.
     if(!el._max)el._max=setTimeout(function(){stop(el);},MAX);
   }
   function hide(el){
+    el._vis=0;
     if(el.tagName!=='IMG'){clearTimeout(el._max);el._max=0;}
     if(el.tagName==='VIDEO'){if(el._on)el.pause();}
-    // an embed cannot be paused from here (other origin), so unload it;
-    // left alone while it is fullscreen, which also reads as off screen
-    else if(el.tagName==='IFRAME'){if(document.fullscreenElement!==el)el.removeAttribute('src');}
-    else if(el._iv){clearInterval(el._iv);el._iv=0;}
+    else if(el.tagName==='IMG'&&el._iv){clearInterval(el._iv);el._iv=0;}
   }
   document.querySelectorAll('.lcam .resume').forEach(function(b){
     b.addEventListener('click',function(){
@@ -249,7 +267,10 @@ Wind drops 19 to 9 km/h by 07:00.
   var io=new IntersectionObserver(function(es){es.forEach(function(e){
     (e.isIntersecting?show:hide)(e.target);
   });},{threshold:0.25});
-  els.forEach(function(el){io.observe(el);});
+  var nio=new IntersectionObserver(function(es){es.forEach(function(e){
+    (e.isIntersecting?near:far)(e.target);
+  });},{rootMargin:'600px 0px'});
+  els.forEach(function(el){nio.observe(el);io.observe(el);});
 })();
 </script><h2>Plan a session<span class="plan-fc">forecast only</span></h2><div class="plans"><article class="plan" title="Tomorrow" style="--accent:#D7263D"><span class="plan-when"><b>Sun 09:00</b>&ndash;10:30</span><span class="plan-stars">★★★½☆</span><span class="plan-spot">Norte</span><span class="plan-bits">1.2-1.8m · 7km/h ESE · mid tide</span><a class="cal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Surf%20%E2%98%85%E2%98%85%E2%98%85%C2%BD%E2%98%86%20Praia%20do%20Norte&amp;dates=20261101T090000Z/20261101T103000Z&amp;details=Fair%20%C2%B7%201.2-1.8m%20%C2%B7%207km/h%20ESE%20Offshore%20%C2%B7%20mid%20tide%20%C2%B7%20forecast%20only%0Ahttps%3A//erisurf.com/&amp;location=Praia%20do%20Norte%2C%20Ericeira%2C%20Portugal" target="_blank" rel="noopener noreferrer" title="Block 90 minutes in Google Calendar">&#128197; Block</a></article></div><h2>Cams</h2><figure><img loading="lazy" src="img/316/conditions.png" alt="wind and tide"><figcaption>Wind &amp; tide, next 24h</figcaption></figure><div class="shot"><article class="card" style="--accent:#1B7FBF">
 <header><h3>Ribeira</h3><span class="badge" style="background:#ca8a04">FAIR</span></header>

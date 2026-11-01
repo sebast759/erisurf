@@ -1,5 +1,12 @@
 [
  {
+  "run_id": 317,
+  "day": "2026-11-01",
+  "time": "07:41",
+  "slot": "sunrise",
+  "spots": []
+ },
+ {
   "run_id": 316,
   "day": "2026-10-31",
   "time": "18:41",
@@ -1475,30 +1482,6 @@
     "people": 0,
     "note": "closing out on sand, stacked whitewater; empty water and beach",
     "erisurf": 1.5
-   }
-  ]
- },
- {
-  "run_id": 297,
-  "day": "2026-10-28",
-  "time": "07:41",
-  "slot": "sunrise",
-  "spots": [
-   {
-    "spot": "Norte",
-    "rating": "FAIR",
-    "surf_min": 2.4,
-    "surf_max": 3.0,
-    "swell_h": 2.8,
-    "swell_p": 12,
-    "swell_dir": "WNW",
-    "wind_kts": 11,
-    "wind_gust": 12,
-    "wind_dir": "NNE",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast only",
-    "erisurf": 3
    }
   ]
  }

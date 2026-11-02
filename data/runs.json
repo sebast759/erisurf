@@ -1,5 +1,93 @@
 [
  {
+  "run_id": 327,
+  "day": "2026-11-02",
+  "time": "17:40",
+  "slot": "dusk",
+  "spots": [
+   {
+    "spot": "Ribeira",
+    "rating": "FAIR",
+    "surf_min": 0.6,
+    "surf_max": 1.1,
+    "swell_h": 1.2,
+    "swell_p": 12,
+    "swell_dir": "NW",
+    "wind_kts": 6,
+    "wind_gust": 7,
+    "wind_dir": "N",
+    "surfers": 48,
+    "people": 10,
+    "note": "clean lines at sunset, thigh to stomach; ~48 out on close-up, 3 stretches added",
+    "erisurf": 4
+   },
+   {
+    "spot": "Norte",
+    "rating": "FAIR",
+    "surf_min": 0.6,
+    "surf_max": 1.1,
+    "swell_h": 1.2,
+    "swell_p": 11,
+    "swell_dir": "NW",
+    "wind_kts": 6,
+    "wind_gust": 7,
+    "wind_dir": "N",
+    "surfers": null,
+    "people": null,
+    "note": "no cam frames this run; forecast stars only",
+    "erisurf": 3
+   },
+   {
+    "spot": "Sul",
+    "rating": "FAIR",
+    "surf_min": 0.6,
+    "surf_max": 1.1,
+    "swell_h": 1.2,
+    "swell_p": 11,
+    "swell_dir": "NW",
+    "wind_kts": 6,
+    "wind_gust": 7,
+    "wind_dir": "N",
+    "surfers": 12,
+    "people": null,
+    "note": "green walls wrapping past the point, 1 riding; ~12 out on detail crop",
+    "erisurf": 4
+   },
+   {
+    "spot": "Pedra",
+    "rating": "FAIR",
+    "surf_min": 0.9,
+    "surf_max": 1.2,
+    "swell_h": 1.2,
+    "swell_p": 12,
+    "swell_dir": "NW",
+    "wind_kts": 6,
+    "wind_gust": 7,
+    "wind_dir": "N",
+    "surfers": 0,
+    "people": 5,
+    "note": "peeling with green shoulder in low light; nobody on detail crop, ~5 on cliff",
+    "erisurf": 2.5
+   },
+   {
+    "spot": "Lizandro",
+    "rating": "FAIR",
+    "surf_min": 0.9,
+    "surf_max": 1.2,
+    "swell_h": 1.2,
+    "swell_p": 11,
+    "swell_dir": "NW",
+    "wind_kts": 6,
+    "wind_gust": 7,
+    "wind_dir": "N",
+    "surfers": null,
+    "people": 7,
+    "note": "dumping on the shore, spray on rocks; too dark to confirm a count, ~7 on sand",
+    "erisurf": 2
+   }
+  ]
+ },
+ {
   "run_id": 326,
   "day": "2026-11-02",
   "time": "15:41",
@@ -1427,46 +1515,6 @@
     "people": 18,
     "note": "long white walls, some shoulder; approx ~11 out, distant cam",
     "erisurf": 3
-   }
-  ]
- },
- {
-  "run_id": 307,
-  "day": "2026-10-30",
-  "time": "07:41",
-  "slot": "sunrise",
-  "spots": [
-   {
-    "spot": "Norte",
-    "rating": "FAIR",
-    "surf_min": 0.6,
-    "surf_max": 0.9,
-    "swell_h": 0.8,
-    "swell_p": 10,
-    "swell_dir": "NNW",
-    "wind_kts": 9,
-    "wind_gust": 10,
-    "wind_dir": "NNE",
-    "surfers": null,
-    "people": null,
-    "note": "no camera frames this run; forecast only",
-    "erisurf": 3
-   },
-   {
-    "spot": "Sul",
-    "rating": "FAIR",
-    "surf_min": 0.6,
-    "surf_max": 0.9,
-    "swell_h": 0.8,
-    "swell_p": 10,
-    "swell_dir": "NNW",
-    "wind_kts": 9,
-    "wind_gust": 10,
-    "wind_dir": "NNE",
-    "surfers": 0,
-    "people": null,
-    "note": "near-flat at dawn, only wash on the point rocks; nobody out on detail crop",
-    "erisurf": 2
    }
   ]
  }

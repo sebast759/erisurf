@@ -1,5 +1,29 @@
 [
  {
+  "run_id": 322,
+  "day": "2026-11-02",
+  "time": "07:41",
+  "slot": "sunrise",
+  "spots": [
+   {
+    "spot": "Lizandro",
+    "rating": "FAIR",
+    "surf_min": 0.9,
+    "surf_max": 1.4,
+    "swell_h": 1.5,
+    "swell_p": 12,
+    "swell_dir": "NW",
+    "wind_kts": 3,
+    "wind_gust": 3,
+    "wind_dir": "E",
+    "surfers": 0,
+    "people": 0,
+    "note": "sets peeling off rocks with green shoulder, shorebreak at high tide; nobody out on detail crop",
+    "erisurf": 2.5
+   }
+  ]
+ },
+ {
   "run_id": 321,
   "day": "2026-11-01",
   "time": "16:41",
@@ -1477,12 +1501,5 @@
     "erisurf": 2.5
    }
   ]
- },
- {
-  "run_id": 302,
-  "day": "2026-10-29",
-  "time": "07:41",
-  "slot": "sunrise",
-  "spots": []
  }
 ]

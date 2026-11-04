@@ -65,6 +65,10 @@ tr:last-child th,tr:last-child td{border-bottom:0}
 .cond{background:var(--panel);border:1px solid var(--line);border-left:4px solid #0891b2;
   border-radius:10px;padding:10px 14px;margin:0 0 16px;font-size:13.5px}
 .nocam{color:var(--muted)}
+.crowdsvg{width:100%;height:auto;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;display:block}
+.crowdsvg .cl{font-size:10px;fill:var(--muted)}
+.crowdsvg .night{fill:var(--ink);opacity:.07}
 .mark{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--ink);font-weight:700;margin:0 1px}
 .out-yes{font-weight:700}
 .out-no{color:var(--muted);font-weight:400}
@@ -115,7 +119,8 @@ figcaption{color:var(--muted);font-size:12px;margin-top:5px}
   font-size:17px;text-decoration:none;color:var(--ink)}
 .headline b{font-weight:700}
 .headline span{color:var(--muted);font-size:13px;margin-left:4px}
-.headline .headline-sub{display:block;font-size:12px;font-weight:400;margin:3px 0 0}
+.headline .headline-sub{display:block;font-size:13px;font-weight:400;margin:3px 0 0}
+.headline .headline-tide{display:block;font-size:16px;font-weight:500;color:var(--ink);margin:4px 0 0}
 .headline:hover{border-color:#0891b2}
 summary.headline{cursor:pointer;list-style:none}
 summary.headline::-webkit-details-marker{display:none}
@@ -167,6 +172,7 @@ html{scroll-behavior:smooth}
 <div class="nav"><a class="brand" href="../index.html" aria-label="Ericeira Surf"><img
  src="../logo.jpg" width="34" height="34" alt=""></a><a href="../index.html">Latest</a>
 <a href="../archive/index.html">Archive</a>
+<a href="../crowd.html">Crowd</a>
 <a href="../about.html">How this works</a></div>
 <h1>2026-11-04 09:41</h1><p class='sub'>morning slot &middot; run 335</p><div class="report">👍 <b>WORTH SURFING · Ribeira ★★★☆☆ · 09:41</b>
 🌊 0.4m @ 13s W · 💨 E 12 km/h · 🌅 17:35
@@ -177,10 +183,10 @@ html{scroll-behavior:smooth}
 <code>Pedra    ★★★☆☆  0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae">▪️</a> <a href="https://beachcam.meo.pt/livecams/ericeira/">🔹</a>
 <code>Lizandro ★★½☆☆   0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd">▪️</a> <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro">▫️</a> <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro">🔸</a>
 <b>CAM · surfers out</b>
-<code>Ribeira  clean, small +1★     ~14 out</code>
+<code>Ribeira  clean, small +1★     ~14 normal</code>
 <code>Sul      barely breaking -½★  0</code>
-<code>Pedra    clean peelers +1★    ~6 out</code>
-<code>Lizandro shorebreak +½★       ~5 out</code>
+<code>Pedra    clean peelers +1★    ~6 normal</code>
+<code>Lizandro shorebreak +½★       ~5 normal</code>
 <b>VERDICT</b>
 ★★★☆☆ Ribeira. Dawn call confirmed, offshore holds till NW breeze ~13:00. Go now; Pedra the quieter option at ~6 out.
 <b>NEXT · 11:30</b>

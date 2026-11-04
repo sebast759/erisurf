@@ -116,11 +116,12 @@ figcaption{color:var(--muted);font-size:12px;margin-top:5px}
 #report{scroll-margin-top:12px}
 .headline{display:block;background:var(--panel);border:1px solid var(--line);
   border-left:4px solid #0891b2;border-radius:10px;padding:10px 14px;margin:0 0 6px;
-  font-size:17px;text-decoration:none;color:var(--ink)}
+  font-size:16px;text-decoration:none;color:var(--ink)}
 .headline b{font-weight:700}
 .headline span{color:var(--muted);font-size:13px;margin-left:4px}
-.headline .headline-sub{display:block;font-size:15px;font-weight:400;margin:4px 0 0}
-@media(max-width:480px){.headline .headline-sub{font-size:13.5px}}
+.headline .headline-sub{display:block;font-size:14px;font-weight:400;margin:4px 0 0}
+.headline .headline-sub+.headline-sub{margin-top:1px}
+@media(max-width:480px){.headline .headline-sub{font-size:13px}}
 .headline:hover{border-color:#0891b2}
 summary.headline{cursor:pointer;list-style:none}
 summary.headline::-webkit-details-marker{display:none}
@@ -128,7 +129,30 @@ summary.headline::-webkit-details-marker{display:none}
 .fold .less,.fold[open] .more{display:none}
 .fold[open] .less{display:inline}
 .fold .plan-fc{display:block;margin:0 0 6px}
-@media(max-width:480px){.headline{font-size:15px;padding:9px 11px}}
+@media(max-width:480px){.headline{font-size:14.5px;padding:9px 11px}}
+/* open, the headline and the report are ONE frame (4 Nov 2026) */
+.fold[open]{background:var(--panel);border:1px solid var(--line);
+  border-left:4px solid #0891b2;border-radius:10px;margin-bottom:16px}
+.fold[open] .headline{border:0;border-radius:10px 10px 0 0;margin:0;
+  border-bottom:1px solid var(--line)}
+.fold[open] .report{border:0;border-radius:0 0 10px 10px;margin:0;
+  padding-left:14px;padding-right:14px}
+/* the SPOTS and CAM rows as tables, in the page font */
+.report .rt{width:auto;min-width:0;border:0;background:none;border-radius:0;
+  margin:2px 0 8px;white-space:normal}
+.report .rt th,.report .rt td{border:0;padding:3px 14px 3px 0;font-size:14px;
+  vertical-align:middle;white-space:nowrap}
+.report .rt th{font-weight:650;text-align:left;text-transform:none;letter-spacing:0}
+.report .rt .st{letter-spacing:.04em;color:#d97706}
+.report .rt .num{font-variant-numeric:tabular-nums}
+.report .rt .adj{color:var(--muted);font-size:13px}
+.report .rt .n{font-weight:650}
+.report .rt .cw{font-size:12px;color:var(--muted)}
+.report .rt .cw-busy{color:#d97706}
+.report .rt .cw-packed{color:#dc2626}
+.report .rt .logos a{display:inline-flex;margin-right:5px;vertical-align:middle}
+.report .rt .camico{width:18px;height:18px}
+@media(max-width:480px){.report .rt th,.report .rt td{font-size:13px;padding-right:9px}}
 html{scroll-behavior:smooth}
 /* Live cams: a 3-column matrix of big tiles, 2 on a tablet, 1 on a phone */
 .live{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:16px}
@@ -162,9 +186,9 @@ html{scroll-behavior:smooth}
 .lmore{display:block;margin-top:1px}
 .lmore a{color:var(--muted);text-decoration:none;margin-left:6px;white-space:nowrap}
 .lmore a:hover{color:var(--accent)}
-/* the run's crowd photo with its spot card directly under it */
-.shot{margin:0 0 18px}
-.shot figure{margin:0 0 6px}
+/* each spot card titles its crowd photo, directly above it */
+.shot{margin:0 0 22px;scroll-margin-top:14px}
+.shot figure{margin:6px 0 0}
 .shot .card{border-top-width:4px}
 </style>
 <script data-goatcounter="https://erisurf.goatcounter.com/count"
@@ -175,7 +199,7 @@ html{scroll-behavior:smooth}
 <a href="crowd.html">Crowd</a>
 <a href="about.html">How this works</a></div>
 <h1>How this works</h1>
-<p class="sub">Ericeira Surf &middot; 334 runs recorded since 27 Aug 2026</p>
+<p class="sub">Ericeira Surf &middot; 335 runs recorded since 27 Aug 2026</p>
 <div class="report" style="white-space:normal">
 <p>Erisurf is a personal, non-commercial research project exploring surf
 conditions across five spots in Ericeira. The idea is simple: compare expected

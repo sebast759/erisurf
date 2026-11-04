@@ -116,11 +116,12 @@ figcaption{color:var(--muted);font-size:12px;margin-top:5px}
 #report{scroll-margin-top:12px}
 .headline{display:block;background:var(--panel);border:1px solid var(--line);
   border-left:4px solid #0891b2;border-radius:10px;padding:10px 14px;margin:0 0 6px;
-  font-size:17px;text-decoration:none;color:var(--ink)}
+  font-size:16px;text-decoration:none;color:var(--ink)}
 .headline b{font-weight:700}
 .headline span{color:var(--muted);font-size:13px;margin-left:4px}
-.headline .headline-sub{display:block;font-size:15px;font-weight:400;margin:4px 0 0}
-@media(max-width:480px){.headline .headline-sub{font-size:13.5px}}
+.headline .headline-sub{display:block;font-size:14px;font-weight:400;margin:4px 0 0}
+.headline .headline-sub+.headline-sub{margin-top:1px}
+@media(max-width:480px){.headline .headline-sub{font-size:13px}}
 .headline:hover{border-color:#0891b2}
 summary.headline{cursor:pointer;list-style:none}
 summary.headline::-webkit-details-marker{display:none}
@@ -128,7 +129,30 @@ summary.headline::-webkit-details-marker{display:none}
 .fold .less,.fold[open] .more{display:none}
 .fold[open] .less{display:inline}
 .fold .plan-fc{display:block;margin:0 0 6px}
-@media(max-width:480px){.headline{font-size:15px;padding:9px 11px}}
+@media(max-width:480px){.headline{font-size:14.5px;padding:9px 11px}}
+/* open, the headline and the report are ONE frame (4 Nov 2026) */
+.fold[open]{background:var(--panel);border:1px solid var(--line);
+  border-left:4px solid #0891b2;border-radius:10px;margin-bottom:16px}
+.fold[open] .headline{border:0;border-radius:10px 10px 0 0;margin:0;
+  border-bottom:1px solid var(--line)}
+.fold[open] .report{border:0;border-radius:0 0 10px 10px;margin:0;
+  padding-left:14px;padding-right:14px}
+/* the SPOTS and CAM rows as tables, in the page font */
+.report .rt{width:auto;min-width:0;border:0;background:none;border-radius:0;
+  margin:2px 0 8px;white-space:normal}
+.report .rt th,.report .rt td{border:0;padding:3px 14px 3px 0;font-size:14px;
+  vertical-align:middle;white-space:nowrap}
+.report .rt th{font-weight:650;text-align:left;text-transform:none;letter-spacing:0}
+.report .rt .st{letter-spacing:.04em;color:#d97706}
+.report .rt .num{font-variant-numeric:tabular-nums}
+.report .rt .adj{color:var(--muted);font-size:13px}
+.report .rt .n{font-weight:650}
+.report .rt .cw{font-size:12px;color:var(--muted)}
+.report .rt .cw-busy{color:#d97706}
+.report .rt .cw-packed{color:#dc2626}
+.report .rt .logos a{display:inline-flex;margin-right:5px;vertical-align:middle}
+.report .rt .camico{width:18px;height:18px}
+@media(max-width:480px){.report .rt th,.report .rt td{font-size:13px;padding-right:9px}}
 html{scroll-behavior:smooth}
 /* Live cams: a 3-column matrix of big tiles, 2 on a tablet, 1 on a phone */
 .live{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:16px}
@@ -162,9 +186,9 @@ html{scroll-behavior:smooth}
 .lmore{display:block;margin-top:1px}
 .lmore a{color:var(--muted);text-decoration:none;margin-left:6px;white-space:nowrap}
 .lmore a:hover{color:var(--accent)}
-/* the run's crowd photo with its spot card directly under it */
-.shot{margin:0 0 18px}
-.shot figure{margin:0 0 6px}
+/* each spot card titles its crowd photo, directly above it */
+.shot{margin:0 0 22px;scroll-margin-top:14px}
+.shot figure{margin:6px 0 0}
 .shot .card{border-top-width:4px}
 </style>
 <script data-goatcounter="https://erisurf.goatcounter.com/count"
@@ -177,17 +201,8 @@ html{scroll-behavior:smooth}
 <h1>2026-11-03 15:41</h1><p class='sub'>sunset slot &middot; run 332</p><div class="report">👍 <b>WORTH SURFING · Ribeira ★★★☆☆ · 15:41</b>
 🌊 0.9m @ 10s NW · 💨 WNW 11 km/h · 🌅 17:36
 ➘→ (High 09:24) · Low tide 15:59 · High 22:15
-<code>Ribeira  ★★★☆☆  0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2">▪️</a> <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas">▫️</a>
-<code>Norte    ★★☆☆☆  0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36">▪️</a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd">▫️</a> <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira">🔸</a>
-<code>Sul      ★★½☆☆   0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/praia-do-sul/5fb2c2da7057d993d9d2caa3">▪️</a> <a href="https://beachcam.meo.pt/livecams/ericeira-praia-do-sul/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-praias-sul">▫️</a> <a href="https://gosurf.fr/webcam/en/110/Ericeira-Praia-Do-Sul">🔸</a>
-<code>Pedra    ★★☆☆☆  0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae">▪️</a> <a href="https://beachcam.meo.pt/livecams/ericeira/">🔹</a>
-<code>Lizandro ★★☆☆☆  0.3-0.6m</code> <a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd">▪️</a> <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro">▫️</a> <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro">🔸</a>
-<b>CAM · surfers out</b>
-<code>Ribeira  soft, foggy +1★  ~6 out</code>
-<code>Sul      clean lines +½★  -</code>
-<code>Pedra    fogged out        -</code>
-<code>Lizandro fog, weak lines   -</code>
-<b>VERDICT</b>
+<table class="rt"><tr><th>Ribeira</th><td class="st">★★★☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a></td></tr><tr><th>Norte</th><td class="st">★★☆☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr><tr><th>Sul</th><td class="st">★★½☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/praia-do-sul/5fb2c2da7057d993d9d2caa3" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ericeira-praia-do-sul/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-praias-sul" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/110/Ericeira-Praia-Do-Sul" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr><tr><th>Pedra</th><td class="st">★★☆☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ericeira/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a></td></tr><tr><th>Lizandro</th><td class="st">★★☆☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr></table><b>CAM · surfers out</b>
+<table class="rt"><tr><th>Ribeira</th><td>soft, foggy</td><td class="adj">+1★</td><td class="num"><span class="n">~6</span> <span class="cw cw-out">out</span></td></tr><tr><td colspan="4"><code>Sul      clean lines +½★  -</code></td></tr><tr><td colspan="4"><code>Pedra    fogged out        -</code></td></tr><tr><td colspan="4"><code>Lizandro fog, weak lines   -</code></td></tr></table><b>VERDICT</b>
 ★★★☆☆ Ribeira. ~6 out in thick fog, small but surfed. Go now if nearby, last light 17:36; else wait for tomorrow dawn.
 <b>NEXT · 17:30</b>
 ⭐️ <b>Tomorrow · Wed 08:00-09:30</b> ★★★½☆ Norte · 0.3-0.6m · 13 km/h E offshore · high tide <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36">📈</a> <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Surf%20%E2%98%85%E2%98%85%E2%98%85%C2%BD%E2%98%86%20Praia%20do%20Norte&amp;dates=20261104T080000Z/20261104T093000Z&amp;details=Fair%20%C2%B7%200.3-0.6m%20%C2%B7%2013km/h%20E%20Offshore%20%C2%B7%20high%20tide%20%C2%B7%20forecast%20only%0Ahttps%3A//erisurf.com/&amp;location=Praia%20do%20Norte%2C%20Ericeira%2C%20Portugal">📅</a></div><h2 id="cams">Cams</h2><figure id="pic-ribeira"><a href="../img/332/ribeira_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/332/ribeira_crowd.jpg" alt="ribeira_crowd"></a><figcaption>Ribeira d&#x27;Ilhas</figcaption></figure><figure id="pic-sul"><a href="../img/332/sul_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/332/sul_crowd.jpg" alt="sul_crowd"></a><figcaption>Praia do Sul</figcaption></figure><figure id="pic-pedra"><a href="../img/332/pedra_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/332/pedra_crowd.jpg" alt="pedra_crowd"></a><figcaption>Pedra Branca</figcaption></figure><figure id="pic-lizandro"><a href="../img/332/lizandro_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/332/lizandro_crowd.jpg" alt="lizandro_crowd"></a><figcaption>Foz do Lizandro</figcaption></figure><h2>Spot notes</h2><div class='grid'><article class="card" style="--accent:#1B7FBF">

@@ -1,5 +1,12 @@
 [
  {
+  "run_id": 340,
+  "day": "2026-11-05",
+  "time": "07:41",
+  "slot": "sunrise",
+  "spots": []
+ },
+ {
   "run_id": 339,
   "day": "2026-11-04",
   "time": "17:41",
@@ -1539,94 +1546,6 @@
     "surfers": null,
     "people": 10,
     "note": "long sections closing, heavy spray; backlit haze, surfers unreadable",
-    "erisurf": 2
-   }
-  ]
- },
- {
-  "run_id": 320,
-  "day": "2026-11-01",
-  "time": "14:41",
-  "slot": "sunset",
-  "spots": [
-   {
-    "spot": "Ribeira",
-    "rating": "FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 1.7,
-    "swell_p": 13,
-    "swell_dir": "WNW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": 16,
-    "people": 20,
-    "note": "green walls peeling along the point, riders on waves; ~16 out on close-up",
-    "erisurf": 4
-   },
-   {
-    "spot": "Norte",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 1.7,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast only",
-    "erisurf": 2
-   },
-   {
-    "spot": "Sul",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 1.7,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": 14,
-    "people": null,
-    "note": "green walls off the point, wide white inside; ~14 out on detail crop",
-    "erisurf": 3
-   },
-   {
-    "spot": "Pedra",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.8,
-    "swell_h": 1.6,
-    "swell_p": 13,
-    "swell_dir": "WNW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": null,
-    "people": null,
-    "note": "sun glare over the lineup, surfers unreadable; forecast stands",
-    "erisurf": 2
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 1.2,
-    "surf_max": 1.5,
-    "swell_h": 1.7,
-    "swell_p": 13,
-    "swell_dir": "NW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": 2,
-    "people": 16,
-    "note": "sections closing, heavy white inside; ~2 out, wide cam so approximate",
     "erisurf": 2
    }
   ]

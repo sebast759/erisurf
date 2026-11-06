@@ -32,12 +32,27 @@
 .chip-hot{color:var(--hot-fg);background:var(--hot-bg);border-color:var(--hot-bd)}
 .chip-worth{color:var(--worth-fg);background:var(--worth-bg);border-color:var(--worth-bd)}
 .chip-marginal{color:var(--marg-fg);background:var(--marg-bg);border-color:var(--marg-bd)}
-.chip-skip,.chip-crowd{color:var(--neu-fg);background:var(--neu-bg);border-color:var(--neu-bd)}
+.chip-skip,.cr-none{color:var(--neu-fg);background:var(--neu-bg);border-color:var(--neu-bd)}
+/* crowd: erisurf's own read, in the site turquoise; fuller lineup, fuller chip */
+/* 6 Nov 2026 (his call): no pill, bold text warming toward red as it fills,
+   same ramp as the report table's crowd words (.cw-busy / .cw-packed) */
+.chip-crowd:not(.cr-none){background:none;border-color:transparent;padding:0 2px;
+  font-size:12.5px;font-weight:700}
+.cr-quiet{color:#15803d}
+.cr-normal{color:var(--ink2)}
+.cr-busy{color:#d97706}
+.cr-packed{color:#dc2626}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .cr-quiet{color:#4ade80}
+  :root:not([data-theme=light]) .cr-busy{color:#fbbf24}
+  :root:not([data-theme=light]) .cr-packed{color:#f87171}}
 .meta{color:var(--ink2);font-size:12px;font-weight:500;white-space:nowrap}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);margin:0;padding:24px 18px 64px;
   font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 .wrap{max-width:1180px;margin:0 auto}
+/* big screens: wider page so the three cam columns grow (6 Nov 2026) */
+@media(min-width:1400px){.wrap{max-width:1480px}}
+@media(min-width:1800px){.wrap{max-width:1720px}}
 a{color:inherit}
 h1{font-size:24px;margin:0 0 2px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 20px;font-size:14px}
@@ -169,11 +184,13 @@ summary.headline::-webkit-details-marker{display:none}
 .hb .hb-row+.hb-row{margin-top:3px}
 .hb .hb-top{gap:5px 6px;margin-bottom:2px}
 .hb .hb-top .stars{margin:0 6px 0 4px}
-.hb .hb-tide{font-size:12px;color:var(--muted)}
-.hb .hb-g{white-space:nowrap;margin:0;font-size:inherit;color:inherit}
+.hb .hb-tide{font-size:13px;color:var(--muted)}
+.hb .hb-g{white-space:nowrap;margin:0 0 0 10px;font-size:inherit;color:inherit}
 .hb .hb-spot{font-size:17px;font-weight:600;color:var(--ink);margin:0 4px 0 0;
   letter-spacing:-.01em}
-.hb .hb-time{margin:0}
+.hb .hb-time{margin:0;font-size:13px}
+/* one size for rows 2-3, crowd and timestamp (6 Nov 2026) */
+.hb .hb-row .chip-crowd{font-size:13px}
 .hb .hb-sep{color:var(--muted);opacity:.55;margin:0 7px;font-size:inherit}
 .hb .hb-past{color:var(--muted);opacity:.75;margin:0;font-size:inherit}
 .hb .hb-tide .hb-past{opacity:.7}

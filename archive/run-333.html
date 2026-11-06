@@ -32,12 +32,27 @@
 .chip-hot{color:var(--hot-fg);background:var(--hot-bg);border-color:var(--hot-bd)}
 .chip-worth{color:var(--worth-fg);background:var(--worth-bg);border-color:var(--worth-bd)}
 .chip-marginal{color:var(--marg-fg);background:var(--marg-bg);border-color:var(--marg-bd)}
-.chip-skip,.chip-crowd{color:var(--neu-fg);background:var(--neu-bg);border-color:var(--neu-bd)}
+.chip-skip,.cr-none{color:var(--neu-fg);background:var(--neu-bg);border-color:var(--neu-bd)}
+/* crowd: erisurf's own read, in the site turquoise; fuller lineup, fuller chip */
+/* 6 Nov 2026 (his call): no pill, bold text warming toward red as it fills,
+   same ramp as the report table's crowd words (.cw-busy / .cw-packed) */
+.chip-crowd:not(.cr-none){background:none;border-color:transparent;padding:0 2px;
+  font-size:12.5px;font-weight:700}
+.cr-quiet{color:#15803d}
+.cr-normal{color:var(--ink2)}
+.cr-busy{color:#d97706}
+.cr-packed{color:#dc2626}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .cr-quiet{color:#4ade80}
+  :root:not([data-theme=light]) .cr-busy{color:#fbbf24}
+  :root:not([data-theme=light]) .cr-packed{color:#f87171}}
 .meta{color:var(--ink2);font-size:12px;font-weight:500;white-space:nowrap}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);margin:0;padding:24px 18px 64px;
   font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 .wrap{max-width:1180px;margin:0 auto}
+/* big screens: wider page so the three cam columns grow (6 Nov 2026) */
+@media(min-width:1400px){.wrap{max-width:1480px}}
+@media(min-width:1800px){.wrap{max-width:1720px}}
 a{color:inherit}
 h1{font-size:24px;margin:0 0 2px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 20px;font-size:14px}
@@ -169,11 +184,13 @@ summary.headline::-webkit-details-marker{display:none}
 .hb .hb-row+.hb-row{margin-top:3px}
 .hb .hb-top{gap:5px 6px;margin-bottom:2px}
 .hb .hb-top .stars{margin:0 6px 0 4px}
-.hb .hb-tide{font-size:12px;color:var(--muted)}
-.hb .hb-g{white-space:nowrap;margin:0;font-size:inherit;color:inherit}
+.hb .hb-tide{font-size:13px;color:var(--muted)}
+.hb .hb-g{white-space:nowrap;margin:0 0 0 10px;font-size:inherit;color:inherit}
 .hb .hb-spot{font-size:17px;font-weight:600;color:var(--ink);margin:0 4px 0 0;
   letter-spacing:-.01em}
-.hb .hb-time{margin:0}
+.hb .hb-time{margin:0;font-size:13px}
+/* one size for rows 2-3, crowd and timestamp (6 Nov 2026) */
+.hb .hb-row .chip-crowd{font-size:13px}
 .hb .hb-sep{color:var(--muted);opacity:.55;margin:0 7px;font-size:inherit}
 .hb .hb-past{color:var(--muted);opacity:.75;margin:0;font-size:inherit}
 .hb .hb-tide .hb-past{opacity:.7}
@@ -258,7 +275,7 @@ html{scroll-behavior:smooth}
 <b>NEXT · Wed 07:30</b>
 ⭐️ <b>Tomorrow · Wed 08:00-09:30</b> ★★★½☆ Norte · 0.3-0.6m · 13 km/h E offshore · high tide <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36">📈</a> <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Surf%20%E2%98%85%E2%98%85%E2%98%85%C2%BD%E2%98%86%20Praia%20do%20Norte&amp;dates=20261104T080000Z/20261104T093000Z&amp;details=Fair%20%C2%B7%200.3-0.6m%20%C2%B7%2013km/h%20E%20Offshore%20%C2%B7%20high%20tide%20%C2%B7%20forecast%20only%0Ahttps%3A//erisurf.com/&amp;location=Praia%20do%20Norte%2C%20Ericeira%2C%20Portugal">📅</a></div><h2 id="cams">Cams</h2><figure id="pic-ribeira"><a href="../img/333/ribeira_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/333/ribeira_crowd.jpg" alt="ribeira_crowd"></a><figcaption>Ribeira d&#x27;Ilhas</figcaption></figure><figure id="pic-sul"><a href="../img/333/sul_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/333/sul_crowd.jpg" alt="sul_crowd"></a><figcaption>Praia do Sul</figcaption></figure><figure id="pic-pedra"><a href="../img/333/pedra_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/333/pedra_crowd.jpg" alt="pedra_crowd"></a><figcaption>Pedra Branca</figcaption></figure><figure id="pic-lizandro"><a href="../img/333/lizandro_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/333/lizandro_crowd.jpg" alt="lizandro_crowd"></a><figcaption>Foz do Lizandro</figcaption></figure><h2>Spot notes</h2><div class='grid'><article class="card" style="--accent:#1B7FBF">
 <header><h3>Ribeira</h3></header>
-<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★★<span class="soff">☆☆</span></span><span class="chip chip-worth">👍 Worth surfing</span><span class="chip chip-crowd">Busy</span></p>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★★<span class="soff">☆☆</span></span><span class="chip chip-worth">👍 Worth surfing</span><span class="chip chip-crowd cr-busy">🏄 Busy</span></p>
 <p class="who"><b class='out-yes'>16 surfers</b></p><p class="note" title="small clean lines at dusk; ~16 out on close-up, mostly right stretch (higher column)">small clean lines at dusk; ~16 out on close-up, mostly right stretch (higher column)</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="#pic-ribeira" title="jump to this run's frames">frames &gt;&gt;</a></p></article><article class="card" style="--accent:#D7263D">
 <header><h3>Norte</h3></header>
@@ -274,7 +291,7 @@ html{scroll-behavior:smooth}
 <p class="who"><span class='out-no'>0 surfers</span></p><p class="note" title="small peelers along the reef at dusk; nobody seen on detail crop">small peelers along the reef at dusk; nobody seen on detail crop</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/ericeira/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="#pic-pedra" title="jump to this run's frames">frames &gt;&gt;</a></p></article><article class="card" style="--accent:#2E9E5B">
 <header><h3>Lizandro</h3></header>
-<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★★<span class="soff">☆☆</span></span><span class="chip chip-worth">👍 Worth surfing</span><span class="chip chip-crowd">Busy</span></p>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★½<span class="soff">☆☆</span></span><span class="chip chip-marginal">🤔 Marginal</span><span class="chip chip-crowd cr-busy">🏄 Busy</span></p>
 <p class="who"><b class='out-yes'>8 surfers</b></p><p class="note" title="small shorebreak in fading light; ~8 out, approximate (wide cam)">small shorebreak in fading light; ~8 out, approximate (wide cam)</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro" target="_blank" rel="noopener noreferrer" title="GoSurf live cam"><img class="camico" src="../icons/gosurf.png" alt="GoSurf"> &gt;&gt;</a> &middot; <a href="#pic-lizandro" title="jump to this run's frames">frames &gt;&gt;</a></p></article></div>
 </div></body></html>

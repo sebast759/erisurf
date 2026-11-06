@@ -8,9 +8,32 @@
 <meta name="theme-color" media="(prefers-color-scheme:light)" content="#f6f7f9">
 <meta name="theme-color" media="(prefers-color-scheme:dark)" content="#0f1115">
 <style>
-:root{--bg:#f6f7f9;--panel:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb}
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  /* shared components (6 Nov 2026): one star, one chip, one secondary text,
+     used by the banner, the live cams, the spot cards, the plan and the report */
+  --ink2:#4b5563;--star:#c2620a;--star-off:#e2c9ae;
+  --hot-fg:#c2410c;--hot-bg:#fff3ea;--hot-bd:#fde4d0;
+  --worth-fg:#15803d;--worth-bg:#ecf8f0;--worth-bd:#d4efdd;
+  --marg-fg:#a16207;--marg-bg:#fef7e6;--marg-bd:#f8e7bd;
+  --neu-fg:#4b5563;--neu-bg:#f2f4f6;--neu-bd:#e6e9ed}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){
-  --bg:#0f1115;--panel:#171a21;--ink:#e8eaed;--muted:#9aa1ac;--line:#262b34}}
+  --bg:#0f1115;--panel:#171a21;--ink:#e8eaed;--muted:#9aa1ac;--line:#262b34;
+  --ink2:#c3c9d2;--star:#f59e0b;--star-off:#5c4a33;
+  --hot-fg:#fb923c;--hot-bg:rgba(249,115,22,.12);--hot-bd:rgba(249,115,22,.22);
+  --worth-fg:#4ade80;--worth-bg:rgba(34,197,94,.11);--worth-bd:rgba(34,197,94,.2);
+  --marg-fg:#fbbf24;--marg-bg:rgba(245,158,11,.11);--marg-bd:rgba(245,158,11,.2);
+  --neu-fg:#c3c9d2;--neu-bg:rgba(148,163,184,.12);--neu-bd:rgba(148,163,184,.18)}}
+.stars{display:inline-block;font-size:15px;line-height:1;letter-spacing:1px;
+  color:var(--star);white-space:nowrap;font-weight:400;margin:0}
+.stars .soff{color:var(--star-off)}
+.chip{display:inline-flex;align-items:center;gap:4px;height:21px;padding:0 9px;
+  border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:600;
+  line-height:1;white-space:nowrap;margin:0}
+.chip-hot{color:var(--hot-fg);background:var(--hot-bg);border-color:var(--hot-bd)}
+.chip-worth{color:var(--worth-fg);background:var(--worth-bg);border-color:var(--worth-bd)}
+.chip-marginal{color:var(--marg-fg);background:var(--marg-bg);border-color:var(--marg-bd)}
+.chip-skip,.chip-crowd{color:var(--neu-fg);background:var(--neu-bg);border-color:var(--neu-bd)}
+.meta{color:var(--ink2);font-size:12px;font-weight:500;white-space:nowrap}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);margin:0;padding:24px 18px 64px;
   font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
@@ -30,17 +53,20 @@ h1{font-size:24px;margin:0 0 2px;letter-spacing:-.01em}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:420px){.grid{grid-template-columns:1fr}}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-  padding:12px 13px;min-width:0;border-top:4px solid var(--accent)}
+  padding:10px 12px;min-width:0;border-top:3px solid var(--accent)}
 .card header{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.card h3{margin:0;font-size:15px}
-.size{font-size:22px;margin:8px 0 2px;font-weight:650;letter-spacing:-.02em}
-.stars{font-size:14px;font-weight:400;letter-spacing:.02em;margin-left:6px;color:var(--accent)}
+.card h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.size{font-size:15px;margin:0;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+/* size · stars | verdict · crowd: tight inside a group, wider between groups */
+.cline{display:flex;flex-wrap:wrap;align-items:center;gap:5px 6px;margin:5px 0 2px}
+.cline .stars{margin-right:6px}
+.cline .fc{font-size:11px;color:var(--muted);margin:0 6px 0 -2px}
 .note{color:var(--muted);font-size:12.5px;margin:2px 0}
 .who{margin:8px 0 4px;font-size:14px}
 .badge{font-size:10.5px;font-weight:700;letter-spacing:.04em;color:#fff;
   padding:3px 7px;border-radius:999px;white-space:nowrap}
-h2{font-size:14px;margin:30px 0 10px;color:var(--muted);text-transform:uppercase;
-  letter-spacing:.07em}
+h2{font-size:12.5px;font-weight:650;margin:26px 0 9px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.08em}
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 table{border-collapse:collapse;width:100%;min-width:560px;background:var(--panel);
   border:1px solid var(--line);border-radius:12px}
@@ -103,7 +129,7 @@ figcaption{color:var(--muted);font-size:12px;margin-top:5px}
   display:flex;align-items:center;gap:8px;white-space:nowrap}
 .plan-when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 .plan-when b{color:var(--ink);font-weight:650}
-.plan-stars{font-size:14px;color:var(--accent)}
+.plan-stars{font-size:14px;line-height:1;letter-spacing:1px;color:var(--star)}
 .plan-spot{color:var(--ink);font-size:13px;font-weight:650}
 .plan-bits{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;
   font-size:12.5px;color:var(--muted)}
@@ -124,7 +150,7 @@ figcaption{color:var(--muted);font-size:12px;margin-top:5px}
   border-left:4px solid #0891b2;border-radius:10px;padding:10px 14px;margin:0 0 6px;
   font-size:16px;text-decoration:none;color:var(--ink)}
 .headline b{font-weight:700}
-.headline span{color:var(--muted);font-size:13px;margin-left:4px}
+.headline:not(.hb) span{color:var(--muted);font-size:13px;margin-left:4px}
 .headline .headline-sub{display:block;font-size:14px;font-weight:400;margin:4px 0 0}
 .headline .headline-sub+.headline-sub{margin-top:1px}
 @media(max-width:480px){.headline .headline-sub{font-size:13px}}
@@ -137,35 +163,25 @@ summary.headline::-webkit-details-marker{display:none}
 .fold .plan-fc{display:block;margin:0 0 6px}
 @media(max-width:480px){.headline{font-size:14.5px;padding:9px 11px}}
 /* recommendation banner, three rows (6 Nov 2026) */
-.hb{padding:9px 14px 8px;font-size:14px;line-height:1.35}
-.hb .hb-row{display:flex;flex-wrap:wrap;align-items:center;gap:2px 0;margin:0;
-  color:var(--ink);font-size:14px}
+.headline.hb{border-left-width:3px;padding:8px 14px 7px;font-size:13px;line-height:1.35}
+.hb .hb-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;
+  gap:2px 0;margin:0;color:var(--ink);font-size:13px}
 .hb .hb-row+.hb-row{margin-top:3px}
-.hb .hb-top{justify-content:space-between;gap:4px 12px}
-.hb .hb-left,.hb .hb-right{display:flex;flex-wrap:wrap;align-items:center;gap:4px 7px;
-  margin:0;font-size:14px;color:var(--ink)}
-.hb .hb-right{margin-left:auto;color:var(--muted);font-size:12.5px}
-.hb .hb-spot{font-size:17px;font-weight:750;color:var(--ink);margin:0;letter-spacing:-.01em}
-.hb .hb-chip{display:inline-flex;align-items:center;gap:3px;margin:0;padding:1px 8px;
-  border-radius:999px;font-size:12.5px;font-weight:650;white-space:nowrap;
-  border:1px solid transparent}
-.hb .hb-hot{color:#c2410c;background:rgba(249,115,22,.13);border-color:rgba(249,115,22,.35)}
-.hb .hb-worth{color:#15803d;background:rgba(22,163,74,.12);border-color:rgba(22,163,74,.3)}
-.hb .hb-marginal{color:#b45309;background:rgba(217,119,6,.12);border-color:rgba(217,119,6,.3)}
-.hb .hb-skip{color:var(--muted);background:rgba(100,116,139,.1);border-color:var(--line)}
-.hb .hb-stars{color:#f59e0b;font-size:15px;letter-spacing:.5px;margin:0}
-.hb .hb-crowd,.hb .hb-time{color:var(--muted);font-size:12.5px;margin:0;white-space:nowrap}
-.hb .hb-sep{color:var(--muted);opacity:.6;margin:0 6px;font-size:inherit}
-.hb .hb-past{color:var(--muted);margin:0;font-size:inherit}
-.hb .hb-arrow{color:#0891b2;font-weight:700;margin:0 2px 0 0;font-size:inherit}
-.hb .hb-chev{width:7px;height:7px;margin:0 0 3px 2px;border:solid var(--muted);
+.hb .hb-top{gap:5px 6px;margin-bottom:2px}
+.hb .hb-top .stars{margin:0 6px 0 4px}
+.hb .hb-tide{font-size:12px;color:var(--muted)}
+.hb .hb-g{white-space:nowrap;margin:0;font-size:inherit;color:inherit}
+.hb .hb-spot{font-size:17px;font-weight:600;color:var(--ink);margin:0 4px 0 0;
+  letter-spacing:-.01em}
+.hb .hb-time{margin:0}
+.hb .hb-sep{color:var(--muted);opacity:.55;margin:0 7px;font-size:inherit}
+.hb .hb-past{color:var(--muted);opacity:.75;margin:0;font-size:inherit}
+.hb .hb-tide .hb-past{opacity:.7}
+.hb .hb-arrow{color:#0891b2;font-weight:700;margin:0 3px 0 0;font-size:inherit}
+.hb .hb-chev{width:7px;height:7px;margin:0 4px 3px 4px;padding:0;border:solid var(--muted);
   border-width:0 1.6px 1.6px 0;transform:rotate(45deg);transition:transform .15s}
-.fold[open] .hb .hb-chev{transform:rotate(-135deg);margin:3px 0 0 2px}
-@media(max-width:480px){.hb{padding:8px 11px}.hb .hb-row{font-size:13px}
-  .hb .hb-right{margin-left:0}.hb .hb-spot{font-size:16px}}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .hb .hb-hot{color:#fb923c}
-  :root:not([data-theme=light]) .hb .hb-worth{color:#4ade80}
-  :root:not([data-theme=light]) .hb .hb-marginal{color:#fbbf24}}
+.fold[open] .hb .hb-chev{transform:rotate(-135deg);margin:3px 4px 0 4px}
+@media(max-width:480px){.headline.hb{padding:7px 11px 6px}.hb .hb-spot{font-size:16px}}
 /* open, the headline and the report are ONE frame (4 Nov 2026) */
 .fold[open]{background:var(--panel);border:1px solid var(--line);
   border-left:4px solid #0891b2;border-radius:10px;margin-bottom:16px}
@@ -179,7 +195,7 @@ summary.headline::-webkit-details-marker{display:none}
 .report .rt th,.report .rt td{border:0;padding:3px 14px 3px 0;font-size:14px;
   vertical-align:middle;white-space:nowrap}
 .report .rt th{font-weight:650;text-align:left;text-transform:none;letter-spacing:0}
-.report .rt .st{letter-spacing:.04em;color:#d97706}
+.report .rt .st{letter-spacing:1px;color:var(--star)}
 .report .rt .num{font-variant-numeric:tabular-nums}
 .report .rt .adj{color:var(--muted);font-size:13px}
 .report .rt .n{font-weight:650}
@@ -195,9 +211,9 @@ html{scroll-behavior:smooth}
 @media(max-width:900px){.live{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.live{grid-template-columns:1fr}}
 .lcam{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-  overflow:hidden;border-top:4px solid var(--accent);min-width:0}
+  overflow:hidden;border-top:3px solid var(--accent);min-width:0}
 .lcam header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
-  padding:7px 11px;font-size:13.5px;font-weight:650}
+  padding:8px 11px 0;font-size:14px;font-weight:600;letter-spacing:-.01em}
 .lcam header a{color:var(--muted);font-weight:400;text-decoration:none;font-size:12px;
   white-space:nowrap}
 .lcam header a:hover{color:var(--accent)}
@@ -215,10 +231,9 @@ html{scroll-behavior:smooth}
   font:inherit;font-size:12.5px;cursor:pointer}
 .lcam.stopped .resume{display:flex}
 .lcam.stopped .tag{visibility:hidden}
-.lfoot{padding:7px 11px 8px;font-size:12px;color:var(--muted)}
-.lsize{display:block;font-size:15px;font-weight:650;color:var(--ink);white-space:nowrap}
-.lsize .stars{font-size:13px}
-.lsize .fc{font-size:11px;font-weight:400;color:var(--muted);margin-left:6px}
+.lcam .cline{margin:0;padding:5px 11px 8px}
+.lcam header+.vid{margin-top:8px}
+.lfoot{padding:6px 11px 8px;font-size:12px;color:var(--muted)}
 .lmore{display:block;margin-top:1px}
 .lmore a{color:var(--muted);text-decoration:none;margin-left:6px;white-space:nowrap}
 .lmore a:hover{color:var(--accent)}
@@ -237,29 +252,29 @@ html{scroll-behavior:smooth}
 <h1>2026-11-04 11:41</h1><p class='sub'>lunch slot &middot; run 336</p><div class="report">👍 <b>WORTH SURFING · Pedra ★★★☆☆ · 11:41 · 12+ surfers (packed)</b>
 🌊 0.8m @ 8s NNW · 💨 NNE 5 km/h, building to 20 by 16:00
 🟦↘️ Falling tide: (High 10:35) · Low 17:04 · High 23:17 · 🌅 17:35
-<table class="rt"><tr><th>Ribeira</th><td class="st">★½☆☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a></td></tr><tr><th>Norte</th><td class="st">★★☆☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr><tr><th>Sul</th><td class="st">★½☆☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/praia-do-sul/5fb2c2da7057d993d9d2caa3" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ericeira-praia-do-sul/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-praias-sul" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/110/Ericeira-Praia-Do-Sul" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr><tr><th>Pedra</th><td class="st">★★★☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ericeira/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a></td></tr><tr><th>Lizandro</th><td class="st">★★★☆☆</td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr></table><b><a href="#cams">Cam AInalysis</a> · 11:41 · Crowd ●●●○ (busy)</b>
+<table class="rt"><tr><th>Ribeira</th><td class="st"><span class="stars">★½<span class="soff">☆☆☆</span></span></td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a></td></tr><tr><th>Norte</th><td class="st"><span class="stars">★★<span class="soff">☆☆☆</span></span></td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr><tr><th>Sul</th><td class="st"><span class="stars">★½<span class="soff">☆☆☆</span></span></td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/praia-do-sul/5fb2c2da7057d993d9d2caa3" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ericeira-praia-do-sul/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-praias-sul" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/110/Ericeira-Praia-Do-Sul" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr><tr><th>Pedra</th><td class="st"><span class="stars">★★★<span class="soff">☆☆</span></span></td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/ericeira/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a></td></tr><tr><th>Lizandro</th><td class="st"><span class="stars">★★★<span class="soff">☆☆</span></span></td><td class="num">0.3-0.6m</td><td class="logos"><a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd" target="_blank" rel="noopener noreferrer" title="surfline live cam"><img class="camico" src="../icons/surfline.png" alt="surfline"></a> <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/" target="_blank" rel="noopener noreferrer" title="beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="beachcam"></a> <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro" target="_blank" rel="noopener noreferrer" title="surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="surftotal"></a> <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro" target="_blank" rel="noopener noreferrer" title="gosurf live cam"><img class="camico" src="../icons/gosurf.png" alt="gosurf"></a></td></tr></table><b><a href="#cams">Cam AInalysis</a> · 11:41 · Crowd ●●●○ (busy)</b>
 <table class="rt"><tr><th>Ribeira</th><td>point flat</td><td class="adj">-½★</td><td class="num"><span class="n">0</span></td></tr><tr><th>Sul</th><td>near flat</td><td class="adj">-½★</td><td class="num"><span class="n">0</span></td></tr><tr><th>Pedra</th><td>clean peel</td><td class="adj">+1★</td><td class="num"><span class="n">12+</span> <span class="cw cw-packed">packed</span></td></tr><tr><th>Lizandro</th><td>small lines</td><td class="adj">+1★</td><td class="num"><span class="n">10+</span> <span class="cw cw-packed">packed</span></td></tr></table><b>VERDICT</b>
 ★★★☆☆ Pedra. Ribeira switched off since 09:41, crowd moved to Pedra and Lizandro. Go before 13:00; Lizandro the beachie option.
 <b>NEXT · 13:30</b>
 Wind swings NW, 9 to 19 km/h by 15:00.</div><h2 id="cams">Cams</h2><figure id="pic-ribeira"><a href="../img/336/ribeira_lineup.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/336/ribeira_lineup.jpg" alt="ribeira_lineup"></a><figcaption>Ribeira d&#x27;Ilhas</figcaption></figure><figure id="pic-sul"><a href="../img/336/sul_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/336/sul_crowd.jpg" alt="sul_crowd"></a><figcaption>Praia do Sul</figcaption></figure><figure id="pic-pedra"><a href="../img/336/pedra_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/336/pedra_crowd.jpg" alt="pedra_crowd"></a><figcaption>Pedra Branca</figcaption></figure><figure id="pic-lizandro"><a href="../img/336/lizandro_crowd.jpg" target="_blank" title="open full size"><img loading="lazy" src="../img/336/lizandro_crowd.jpg" alt="lizandro_crowd"></a><figcaption>Foz do Lizandro</figcaption></figure><h2>Spot notes</h2><div class='grid'><article class="card" style="--accent:#1B7FBF">
-<header><h3>Ribeira</h3><span class="badge" style="background:#ea580c">POOR-TO-FAIR</span></header>
-<p class="size">0.3&ndash;0.6 m<span class='stars' title='Erisurf rating 1.5/5'>★½☆☆☆</span></p>
+<header><h3>Ribeira</h3></header>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★½<span class="soff">☆☆☆</span></span><span class="chip chip-skip">💤 Skip</span></p>
 <p class="who"><span class='out-no'>0 surfers</span></p><p class="note" title="point not breaking on falling high tide, tiny shorebreak only; L0 M0 R0 / L0 M0 R0 -&gt; 0 (was 14 at 09:41)">point not breaking on falling high tide, tiny shorebreak only; L0 M0 R0 / L0 M0 R0 -&gt; 0 (was 14 at 09:41)</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="#pic-ribeira" title="jump to this run's frames">frames &gt;&gt;</a></p></article><article class="card" style="--accent:#D7263D">
-<header><h3>Norte</h3><span class="badge" style="background:#ea580c">POOR-TO-FAIR</span></header>
-<p class="size">0.3&ndash;0.6 m<span class='stars' title='Erisurf rating 2/5'>★★☆☆☆</span></p>
+<header><h3>Norte</h3></header>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★<span class="soff">☆☆☆</span></span><span class="chip chip-marginal">🤔 Marginal</span></p>
 <p class="who"><span class='nocam'>surfers unclear</span></p><p class="note" title="no cam frames this run; forecast stars only">no cam frames this run; forecast stars only</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira" target="_blank" rel="noopener noreferrer" title="GoSurf live cam"><img class="camico" src="../icons/gosurf.png" alt="GoSurf"> &gt;&gt;</a></p></article><article class="card" style="--accent:#F4820B">
-<header><h3>Sul</h3><span class="badge" style="background:#ea580c">POOR-TO-FAIR</span></header>
-<p class="size">0.3&ndash;0.6 m<span class='stars' title='Erisurf rating 1.5/5'>★½☆☆☆</span></p>
+<header><h3>Sul</h3></header>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★½<span class="soff">☆☆☆</span></span><span class="chip chip-skip">💤 Skip</span></p>
 <p class="who"><span class='out-no'>0 surfers</span></p><p class="note" title="lined swell barely breaking, only wrapping on point rocks; nobody on detail crop">lined swell barely breaking, only wrapping on point rocks; nobody on detail crop</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/praia-do-sul/5fb2c2da7057d993d9d2caa3" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/ericeira-praia-do-sul/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/ericeira-praias-sul" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="https://gosurf.fr/webcam/en/110/Ericeira-Praia-Do-Sul" target="_blank" rel="noopener noreferrer" title="GoSurf live cam"><img class="camico" src="../icons/gosurf.png" alt="GoSurf"> &gt;&gt;</a> &middot; <a href="#pic-sul" title="jump to this run's frames">frames &gt;&gt;</a></p></article><article class="card" style="--accent:#7B4FC9">
-<header><h3>Pedra</h3><span class="badge" style="background:#ea580c">POOR-TO-FAIR</span></header>
-<p class="size">0.3&ndash;0.6 m<span class='stars' title='Erisurf rating 3/5'>★★★☆☆</span></p>
+<header><h3>Pedra</h3></header>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★★<span class="soff">☆☆</span></span><span class="chip chip-worth">👍 Worth surfing</span><span class="chip chip-crowd">Packed</span></p>
 <p class="who"><b class='out-yes'>12 surfers</b></p><p class="note" title="small peelers off the reef, one ridden; ~12 out on detail and crowd crops">small peelers off the reef, one ridden; ~12 out on detail and crowd crops</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/ericeira/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="#pic-pedra" title="jump to this run's frames">frames &gt;&gt;</a></p></article><article class="card" style="--accent:#2E9E5B">
-<header><h3>Lizandro</h3><span class="badge" style="background:#ea580c">POOR-TO-FAIR</span></header>
-<p class="size">0.3&ndash;0.6 m<span class='stars' title='Erisurf rating 3/5'>★★★☆☆</span></p>
+<header><h3>Lizandro</h3></header>
+<p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★★<span class="soff">☆☆</span></span><span class="chip chip-worth">👍 Worth surfing</span><span class="chip chip-crowd">Packed</span></p>
 <p class="who"><b class='out-yes'>10 surfers</b></p><p class="note" title="small clean lines along the beach; ~10 out, approximate (wide cam), surf school paddling out">small clean lines along the beach; ~10 out, approximate (wide cam), surf school paddling out</p>
 <p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro" target="_blank" rel="noopener noreferrer" title="GoSurf live cam"><img class="camico" src="../icons/gosurf.png" alt="GoSurf"> &gt;&gt;</a> &middot; <a href="#pic-lizandro" title="jump to this run's frames">frames &gt;&gt;</a></p></article></div>
 </div></body></html>

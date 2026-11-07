@@ -1,5 +1,12 @@
 [
  {
+  "run_id": 352,
+  "day": "2026-11-07",
+  "time": "07:40",
+  "slot": "sunrise",
+  "spots": []
+ },
+ {
   "run_id": 351,
   "day": "2026-11-06",
   "time": "17:34",
@@ -1587,94 +1594,6 @@
     "people": 20,
     "note": "small shorebreak in fading light; ~8 out, approximate (wide cam)",
     "erisurf": 2.5
-   }
-  ]
- },
- {
-  "run_id": 332,
-  "day": "2026-11-03",
-  "time": "15:41",
-  "slot": "sunset",
-  "spots": [
-   {
-    "spot": "Ribeira",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.9,
-    "swell_p": 10,
-    "swell_dir": "NW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": 6,
-    "people": null,
-    "note": "thick sea fog, small soft lines; ~6 out on close-up right stretch (higher column)",
-    "erisurf": 3
-   },
-   {
-    "spot": "Norte",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.7,
-    "swell_p": 11,
-    "swell_dir": "NNW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast stars only",
-    "erisurf": 2
-   },
-   {
-    "spot": "Sul",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.7,
-    "swell_p": 11,
-    "swell_dir": "NNW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": null,
-    "people": null,
-    "note": "small clean lines wrapping the point under fog; bodies not resolvable",
-    "erisurf": 2.5
-   },
-   {
-    "spot": "Pedra",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.9,
-    "swell_p": 10,
-    "swell_dir": "NW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": null,
-    "people": null,
-    "note": "cam fogged out, solid grey; forecast stars only",
-    "erisurf": 2
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.7,
-    "swell_p": 11,
-    "swell_dir": "NNW",
-    "wind_kts": 6,
-    "wind_gust": 6,
-    "wind_dir": "WNW",
-    "surfers": null,
-    "people": 7,
-    "note": "fog, weak lines in shorebreak; surfers with boards on sand, water unreadable",
-    "erisurf": 2
    }
   ]
  }

@@ -1,5 +1,45 @@
 [
  {
+  "run_id": 356,
+  "day": "2026-11-07",
+  "time": "13:40",
+  "slot": "afternoon",
+  "spots": [
+   {
+    "spot": "Norte",
+    "rating": "POOR_TO_FAIR",
+    "surf_min": 0.3,
+    "surf_max": 0.6,
+    "swell_h": 0.9,
+    "swell_p": 6,
+    "swell_dir": "SW",
+    "wind_kts": 11,
+    "wind_gust": 14,
+    "wind_dir": "S",
+    "surfers": null,
+    "people": null,
+    "note": "no cam frames; forecast only, knee to thigh, S cross-shore",
+    "erisurf": 2
+   },
+   {
+    "spot": "Lizandro",
+    "rating": "POOR_TO_FAIR",
+    "surf_min": 0.3,
+    "surf_max": 0.6,
+    "swell_h": 0.9,
+    "swell_p": 6,
+    "swell_dir": "SW",
+    "wind_kts": 11,
+    "wind_gust": 14,
+    "wind_dir": "S",
+    "surfers": 0,
+    "people": 12,
+    "note": "near flat, tiny shorebreak only; detail crop readable, nobody in water, 1 board carrier on sand",
+    "erisurf": 1
+   }
+  ]
+ },
+ {
   "run_id": 355,
   "day": "2026-11-07",
   "time": "11:40",
@@ -1328,94 +1368,6 @@
     "people": 6,
     "note": "small mushy beach break; ~3 out, approximate (wide cam)",
     "erisurf": 2.5
-   }
-  ]
- },
- {
-  "run_id": 336,
-  "day": "2026-11-04",
-  "time": "11:41",
-  "slot": "lunch",
-  "spots": [
-   {
-    "spot": "Ribeira",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.8,
-    "swell_p": 8,
-    "swell_dir": "NNW",
-    "wind_kts": 3,
-    "wind_gust": 3,
-    "wind_dir": "NNE",
-    "surfers": 0,
-    "people": 6,
-    "note": "point not breaking on falling high tide, tiny shorebreak only; L0 M0 R0 / L0 M0 R0 -> 0 (was 14 at 09:41)",
-    "erisurf": 1.5
-   },
-   {
-    "spot": "Norte",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.4,
-    "swell_p": 13,
-    "swell_dir": "W",
-    "wind_kts": 3,
-    "wind_gust": 3,
-    "wind_dir": "NNE",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames this run; forecast stars only",
-    "erisurf": 2
-   },
-   {
-    "spot": "Sul",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.4,
-    "swell_p": 13,
-    "swell_dir": "W",
-    "wind_kts": 3,
-    "wind_gust": 3,
-    "wind_dir": "NNE",
-    "surfers": 0,
-    "people": null,
-    "note": "lined swell barely breaking, only wrapping on point rocks; nobody on detail crop",
-    "erisurf": 1.5
-   },
-   {
-    "spot": "Pedra",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.8,
-    "swell_p": 8,
-    "swell_dir": "NNW",
-    "wind_kts": 3,
-    "wind_gust": 3,
-    "wind_dir": "NNE",
-    "surfers": 12,
-    "people": 2,
-    "note": "small peelers off the reef, one ridden; ~12 out on detail and crowd crops",
-    "erisurf": 3
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.4,
-    "swell_p": 13,
-    "swell_dir": "W",
-    "wind_kts": 3,
-    "wind_gust": 3,
-    "wind_dir": "NNE",
-    "surfers": 10,
-    "people": 20,
-    "note": "small clean lines along the beach; ~10 out, approximate (wide cam), surf school paddling out",
-    "erisurf": 3
    }
   ]
  }

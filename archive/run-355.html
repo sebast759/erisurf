@@ -2,9 +2,9 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ericeira Surf - 2026-11-07 11:40</title>
-<link rel="icon" href="../favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="../icons/erisurf-favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/erisurf-favicon-32.png">
+<link rel="apple-touch-icon" href="../icons/erisurf-apple-touch.png">
 <meta name="theme-color" media="(prefers-color-scheme:light)" content="#f6f7f9">
 <meta name="theme-color" media="(prefers-color-scheme:dark)" content="#0f1115">
 <style>
@@ -179,21 +179,28 @@ summary.headline::-webkit-details-marker{display:none}
 .fold .plan-fc{display:block;margin:0 0 6px}
 @media(max-width:480px){.headline{font-size:14.5px;padding:9px 11px}}
 /* recommendation banner, three rows (6 Nov 2026) */
-.headline.hb{border-left-width:3px;padding:8px 14px 7px;font-size:13px;line-height:1.35}
+.headline.hb{border-left-width:3px;padding:8px 14px 8px;font-size:13px;line-height:1.35;
+  box-shadow:none;background:var(--panel)}
 .hb .hb-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;
   gap:2px 0;margin:0;color:var(--ink);font-size:13px}
 .hb .hb-row+.hb-row{margin-top:3px}
 .hb .hb-top{gap:5px 6px;margin-bottom:2px}
 .hb .hb-top .stars{margin:0 6px 0 4px}
-.hb .hb-tide{font-size:13px;color:var(--muted)}
-/* TOP SPOTS podium (6 Nov 2026): a quiet fourth row under a hairline */
-.hb .hb-podium{gap:4px 16px;margin-top:7px;padding-top:7px;border-top:1px solid var(--line)}
+.hb .hb-tide{font-size:12.5px;color:var(--muted)}
+.hb .hb-tide .hb-t{color:var(--ink2);font-weight:600;margin:0}
+.hb .hb-ev{white-space:nowrap;margin:0;font-size:inherit;color:inherit}
+.hb .hb-tide .hb-prev{color:var(--muted);opacity:.65}
+.hb .hb-tide .hb-next{color:var(--ink);font-weight:600}
+.hb .hb-tide .hb-then{color:var(--muted)}
+/* BEST OPTIONS (7 Nov 2026): a quiet fourth row, same rhythm as TIDE */
+.hb .hb-podium{gap:2px 0;margin-top:3px}
 .hb .pd-lbl{font-size:11px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--muted);margin:0 2px 0 0}
-.hb .pd{font-size:13px;color:var(--muted);text-decoration:none;white-space:nowrap;margin:0}
+  color:var(--muted);margin:0}
+.hb .pd{font-size:13px;color:var(--ink2);text-decoration:none;white-space:nowrap;margin:0}
 .hb .pd-1{color:var(--ink);font-weight:600}
-.hb .pd-none{font-size:13px;color:var(--muted);margin:0 -8px 0 0;white-space:nowrap}
-.hb .pd:hover{color:#0891b2;text-decoration:underline}
+.hb .pd .pd-n{color:var(--muted);font-weight:400;margin:0}
+.hb .pd .stars{font-size:12.5px;margin:0 0 0 2px;letter-spacing:0}
+.hb .pd:hover{color:#0891b2}
 .lcam[id]{scroll-margin-top:12px}
 .hb .hb-g{white-space:nowrap;margin:0 0 0 10px;font-size:inherit;color:inherit}
 .hb .hb-spot{font-size:17px;font-weight:600;color:var(--ink);margin:0 4px 0 0;
@@ -272,7 +279,7 @@ html{scroll-behavior:smooth}
 <script data-goatcounter="https://erisurf.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script></head><body><div class="wrap">
 <div class="nav"><a class="brand" href="../index.html" aria-label="Ericeira Surf"><img
- src="../logo.jpg" width="34" height="34" alt=""></a><a href="../index.html">Latest</a>
+ src="../icons/erisurf-logo.png" width="34" height="34" alt=""></a><a href="../index.html">Latest</a>
 <a href="../archive/index.html">Archive</a>
 <a href="../crowd.html">Crowd</a>
 <a href="../about.html">How this works</a></div>

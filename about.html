@@ -259,6 +259,26 @@ summary.headline::-webkit-details-marker{display:none}
 .report .rt-merged .rt-7{width:max-content}
 .report .rt-7 td.g2{padding-left:16px;border-left:1px solid var(--line)}
 .report .rt-cap{white-space:normal;margin:6px 0 2px}
+/* banner states (8 Nov 2026): live / fc / stale / night, set by STATE_JS */
+/* page-wide (8 Nov 2026): STATE_JS sets html[data-state]; the banner and
+   the live-cam tiles both read it. Pages without the banner (archive) carry
+   no state and show their stored run as is. */
+.st{display:contents}
+html[data-state]:not([data-state=live]) .st-live{display:none}
+html:not([data-state]) .st-notlive,html[data-state=live] .st-notlive{display:none}
+html:not([data-state]) #report .st:not(.st-live),
+html[data-state]:not([data-state=fc]) .st-fc,html[data-state]:not([data-state=night]) .st-night,
+html[data-state]:not([data-state=stale]) .st-stale{display:none}
+html[data-state]:not([data-state=live]) .hb-podium.st-notlive{display:flex}
+html:not([data-state]) .hb-podium.st-live,html[data-state=live] .hb-podium.st-live{display:flex}
+.cam-old{display:none}
+html[data-state]:not([data-state=live]) .cam-old{display:inline}
+html[data-state]:not([data-state=live]) .cam-now{display:none}
+.chip-night{color:#475569;background:#e8eef6;border-color:#d3dce8}
+.chip-stale{color:#92400e;background:#fef3c7;border-color:#fcd9a0}
+@media (prefers-color-scheme:dark){
+ .chip-night{color:#cbd5e1;background:#1e293b;border-color:#334155}
+ .chip-stale{color:#fcd34d;background:#3a2a0b;border-color:#5c4210}}
 html{scroll-behavior:smooth}
 /* Live cams: a 3-column matrix of big tiles, 2 on a tablet, 1 on a phone */
 .live{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:16px}

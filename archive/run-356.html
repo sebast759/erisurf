@@ -249,6 +249,16 @@ summary.headline::-webkit-details-marker{display:none}
 .report .rt .logos a{display:inline-flex;margin-right:5px;vertical-align:middle}
 .report .rt .camico{width:18px;height:18px}
 @media(max-width:480px){.report .rt th,.report .rt td{font-size:13px;padding-right:9px}}
+/* merged 7-column SPOTS+CAM table vs the two originals (8 Nov 2026): the
+   merged one is laid out off-screen to be measured, shown only when it fits */
+.report .rt-wrap{position:relative;overflow:hidden}
+.report .rt-merged{position:absolute;left:0;top:0;visibility:hidden;pointer-events:none;
+  white-space:nowrap}
+.report .rt-wrap.merged .rt-merged{position:static;visibility:visible;pointer-events:auto}
+.report .rt-wrap.merged .rt-stack{display:none}
+.report .rt-merged .rt-7{width:max-content}
+.report .rt-7 td.g2{padding-left:16px;border-left:1px solid var(--line)}
+.report .rt-cap{white-space:normal;margin:6px 0 2px}
 html{scroll-behavior:smooth}
 /* Live cams: a 3-column matrix of big tiles, 2 on a tablet, 1 on a phone */
 .live{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:16px}
@@ -303,7 +313,7 @@ html{scroll-behavior:smooth}
 <header><h3>Norte</h3></header>
 <p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★★</span><span class="chip chip-marginal">🤔 Marginal</span></p>
 <p class="who"><span class='nocam'>surfers unclear</span></p><p class="note" title="no cam frames; forecast only, knee to thigh, S cross-shore">no cam frames; forecast only, knee to thigh, S cross-shore</p>
-<p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira" target="_blank" rel="noopener noreferrer" title="GoSurf live cam"><img class="camico" src="../icons/gosurf.png" alt="GoSurf"> &gt;&gt;</a></p></article><article class="card" style="--accent:#2E9E5B">
+<p class="cam"><span class="camlbl">Cams</span> <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36" target="_blank" rel="noopener noreferrer" title="Surfline live cam"><img class="camico" src="../icons/surfline.png" alt="Surfline"> &gt;&gt;</a> &middot; <a href="https://beachcam.meo.pt/livecams/praia-dos-pescadores/" target="_blank" rel="noopener noreferrer" title="Beachcam live cam"><img class="camico" src="../icons/beachcam.png" alt="Beachcam"> &gt;&gt;</a> &middot; <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd" target="_blank" rel="noopener noreferrer" title="Surftotal live cam"><img class="camico" src="../icons/surftotal.png" alt="Surftotal"> &gt;&gt;</a> &middot; <a href="https://gosurf.fr/webcam/en/109/Ericeira-Praia-Dos-Pescadores" target="_blank" rel="noopener noreferrer" title="GoSurf live cam"><img class="camico" src="../icons/gosurf.png" alt="GoSurf"> &gt;&gt;</a></p></article><article class="card" style="--accent:#2E9E5B">
 <header><h3>Lizandro</h3></header>
 <p class="cline" title="forecast: POOR-TO-FAIR"><span class="size">0.3&ndash;0.6m</span><span class="stars">★</span><span class="chip chip-skip">💤 Skip</span></p>
 <p class="who"><span class='out-no'>0 surfers</span></p><p class="note" title="near flat, tiny shorebreak only; detail crop readable, nobody in water, 1 board carrier on sand">near flat, tiny shorebreak only; detail crop readable, nobody in water, 1 board carrier on sand</p>

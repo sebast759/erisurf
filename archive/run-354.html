@@ -259,6 +259,33 @@ summary.headline::-webkit-details-marker{display:none}
 .report .rt-merged .rt-7{width:max-content}
 .report .rt-7 td.g2{padding-left:16px;border-left:1px solid var(--line)}
 .report .rt-cap{white-space:normal;margin:6px 0 2px}
+/* outlook cards + tide chart, top of the open banner (9 Nov 2026) */
+.ol{padding:8px 14px 2px}
+.ol-hd{font-size:10.5px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 5px;display:flex;flex-wrap:wrap;gap:0 8px}
+.ol-hd .ol-t{color:var(--ink2)}
+.ol-hd .ol-s:before{content:"·";margin-right:8px;opacity:.55}
+.ol-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.olc{display:flex;flex-direction:column;min-width:0;padding:5px 8px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg)}
+.olc span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3}
+.olc-h{font-size:9.5px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.olc-m{font-size:15px;font-weight:650;color:var(--ink);font-variant-numeric:tabular-nums}
+.olc-i{font-size:11.5px;color:var(--ink2)}
+.ol-na{font-size:12px;color:var(--muted);margin:2px 0 6px}
+.tidec{margin:6px 0 0;height:84px;--tc-a:#cfdcf3;--tc-l:#5b7fc4}
+.tidec[hidden]{display:none}
+.tidec svg{display:block;overflow:visible}
+.tidec .tc-a{fill:var(--tc-a);opacity:.6}
+.tidec .tc-l{fill:none;stroke:var(--tc-l);stroke-width:1.6}
+.tidec .tc-d{fill:var(--tc-l)}
+.tidec .tc-x{font-size:10px;fill:var(--ink2)}
+.tidec .tc-n{stroke:#0891b2;stroke-width:1.2;stroke-dasharray:3 2}
+.tidec .tc-nl{font-size:9px;font-weight:700;fill:#0891b2;letter-spacing:.05em}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .tidec{--tc-a:rgba(91,127,196,.35);--tc-l:#8fa9e0}}
+@media(max-width:480px){.ol{padding:7px 11px 2px}.olc{padding:4px 6px}
+  .olc-m{font-size:13.5px}.olc-i{font-size:10.5px}.olc-h{font-size:9px}}
+.hb .pd-none{color:var(--muted);font-weight:500}
 /* banner states (8 Nov 2026): live / fc / stale / night, set by STATE_JS */
 /* page-wide (8 Nov 2026): STATE_JS sets html[data-state]; the banner and
    the live-cam tiles both read it. Pages without the banner (archive) carry

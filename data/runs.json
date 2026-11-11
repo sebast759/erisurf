@@ -1,5 +1,93 @@
 [
  {
+  "run_id": 375,
+  "day": "2026-11-11",
+  "time": "16:41",
+  "slot": "dusk",
+  "spots": [
+   {
+    "spot": "Ribeira",
+    "rating": "FAIR",
+    "surf_min": 2.4,
+    "surf_max": 3.0,
+    "swell_h": 2.4,
+    "swell_p": 11,
+    "swell_dir": "WNW",
+    "wind_kts": 18,
+    "wind_gust": 25,
+    "wind_dir": "NNW",
+    "surfers": 0,
+    "people": 2,
+    "note": "crumbly lines along the point, bumpy in NNW gusts; close-up L0 M0 R0 / L0 M0 R0 -> 0",
+    "erisurf": 1.5
+   },
+   {
+    "spot": "Norte",
+    "rating": "POOR",
+    "surf_min": 2.4,
+    "surf_max": 3.0,
+    "swell_h": 2.4,
+    "swell_p": 11,
+    "swell_dir": "WNW",
+    "wind_kts": 18,
+    "wind_gust": 25,
+    "wind_dir": "NNW",
+    "surfers": null,
+    "people": null,
+    "note": "no frames this run; forecast only",
+    "erisurf": 1
+   },
+   {
+    "spot": "Sul",
+    "rating": "POOR",
+    "surf_min": 2.4,
+    "surf_max": 3.0,
+    "swell_h": 2.4,
+    "swell_p": 11,
+    "swell_dir": "WNW",
+    "wind_kts": 18,
+    "wind_gust": 25,
+    "wind_dir": "NNW",
+    "surfers": 0,
+    "people": null,
+    "note": "choppy storm mush wrapping the point, nothing clean; detail readable, nobody out; 0",
+    "erisurf": 1
+   },
+   {
+    "spot": "Pedra",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.4,
+    "swell_p": 11,
+    "swell_dir": "WNW",
+    "wind_kts": 18,
+    "wind_gust": 25,
+    "wind_dir": "NNW",
+    "surfers": null,
+    "people": null,
+    "note": "cam down; forecast only",
+    "erisurf": 1
+   },
+   {
+    "spot": "Lizandro",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.4,
+    "swell_p": 11,
+    "swell_dir": "WNW",
+    "wind_kts": 18,
+    "wind_gust": 25,
+    "wind_dir": "NNW",
+    "surfers": 0,
+    "people": 0,
+    "note": "walls closing out on the sand, spray off the rocks, dusk glare; 0 out",
+    "erisurf": 1
+   }
+  ]
+ },
+ {
   "run_id": 374,
   "day": "2026-11-11",
   "time": "15:41",
@@ -1622,12 +1710,5 @@
     "erisurf": 1
    }
   ]
- },
- {
-  "run_id": 355,
-  "day": "2026-11-07",
-  "time": "11:40",
-  "slot": "lunch",
-  "spots": []
  }
 ]

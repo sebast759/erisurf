@@ -66,8 +66,8 @@
     "wind_dir": "ESE",
     "surfers": null,
     "people": null,
-    "note": "cam down; forecast only",
-    "erisurf": 3
+    "note": "cam down; forecast 3 capped to 2 by the seen spots (storm closeouts everywhere)",
+    "erisurf": 2
    },
    {
     "spot": "Lizandro",

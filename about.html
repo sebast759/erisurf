@@ -137,11 +137,14 @@ figure img{max-width:100%}
 #pic-conditions.c36 img,#pic-conditions.c36 .livechart{max-width:920px}
 @media(max-width:640px){#pic-conditions.c36{overflow-x:auto;-webkit-overflow-scrolling:touch}
   #pic-conditions.c36 .livechart{width:600px}}
-.nowline{position:absolute;width:0;border-left:1.2px dashed rgba(8,145,178,.7);
+/* NOW (11 Nov 2026, his ask): slate ink + sun by day, indigo + moon at night */
+.nowline{position:absolute;width:0;border-left:1.2px dashed rgba(51,65,85,.75);
   pointer-events:none}
 .nowlbl{position:absolute;bottom:100%;left:0;margin-bottom:1px;transform:translateX(-50%);
-  font:700 10.5px/1.05 "DejaVu Sans",Verdana,sans-serif;color:#0891b2;
+  font:700 10.5px/1.05 "DejaVu Sans",Verdana,sans-serif;color:#334155;
   text-align:center;white-space:pre}
+.nowline.night{border-left-color:rgba(99,102,241,.8)}
+.nowline.night .nowlbl{color:#6366f1}
 .cam a{font-weight:700;text-decoration:none;color:var(--accent);letter-spacing:-.04em;
   display:inline-flex;align-items:center;gap:3px}
 .camico{width:15px;height:15px;border-radius:4px;background:#fff;padding:1px;

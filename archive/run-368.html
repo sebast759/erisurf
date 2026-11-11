@@ -365,20 +365,24 @@ h2 .plan-fc{font-size:12px}
 #pic-conditions.c36 img,#pic-conditions.c36 .livechart{max-width:750px}
 /* 72h chart behind a toggle (11 Nov 2026): twice the 36h width, shown whole
    on a wide screen, scrolling sideways only where the page is narrower */
-.c72{margin:6px 0 0}
-.c72 summary{cursor:pointer;list-style:none;display:inline-block;font-size:12.5px;
-  font-weight:600;color:#0891b2;padding:4px 10px;border:1px solid var(--line);
-  border-radius:999px;background:var(--panel)}
+/* the toggle is a small ">>" at the right edge of the chart (his ask) */
+#pic-conditions.c36{position:relative}
+.c72 summary{cursor:pointer;list-style:none;position:absolute;top:42%;z-index:3;
+  left:min(750px,100%);transform:translateX(calc(-100% - 6px));
+  font-size:13px;font-weight:700;line-height:1;color:#0891b2;padding:6px 8px;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);
+  box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.c72 summary:hover{background:#0891b2;color:#fff}
+.c72[open] summary{left:min(1500px,100%)}
 .c72 summary::-webkit-details-marker{display:none}
 .c72 .c72-close,.c72[open] .c72-open{display:none}
 .c72[open] .c72-close{display:inline}
-.c72 .scroll72{max-width:1500px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:8px}
+.c72 .scroll72{max-width:1500px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 #pic-conditions.c36 .c72 .livechart{width:100%;min-width:1200px;max-width:1500px}
 #pic-conditions.c36 .c72 img{max-width:none;width:100%}
 @media(max-width:640px){#pic-conditions.c36 .c72 .livechart{width:1200px}}
 /* open, the 72h chart takes the 36h chart's place (its first half repeats it) */
 #pic-conditions:has(.c72[open]) > .livechart{display:none}
-.c72[open] summary{margin-bottom:0}
 /* accents at about 66% (his pass 6): present, never loud */
 .lcam{border-top:2px solid color-mix(in srgb,var(--accent) 66%,transparent)}
 .card,.shot .card{border-top:2px solid color-mix(in srgb,var(--accent) 66%,transparent)}

@@ -1,5 +1,93 @@
 [
  {
+  "run_id": 376,
+  "day": "2026-11-12",
+  "time": "08:55",
+  "slot": "morning",
+  "spots": [
+   {
+    "spot": "Ribeira",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.4,
+    "swell_p": 10,
+    "swell_dir": "WNW",
+    "wind_kts": 17,
+    "wind_gust": 22,
+    "wind_dir": "W",
+    "surfers": 0,
+    "people": null,
+    "note": "storm walls closing out across the point, onshore texture; close-up L0 M0 R0 / L0 M0 R0 -> 0",
+    "erisurf": 1
+   },
+   {
+    "spot": "Norte",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.5,
+    "swell_p": 10,
+    "swell_dir": "WNW",
+    "wind_kts": 17,
+    "wind_gust": 22,
+    "wind_dir": "W",
+    "surfers": null,
+    "people": null,
+    "note": "no frames this run; forecast only",
+    "erisurf": 1
+   },
+   {
+    "spot": "Sul",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.5,
+    "swell_p": 10,
+    "swell_dir": "WNW",
+    "wind_kts": 17,
+    "wind_gust": 22,
+    "wind_dir": "W",
+    "surfers": 0,
+    "people": null,
+    "note": "messy whitewater sections over the reef, nothing clean; detail readable, nobody out; 0",
+    "erisurf": 1
+   },
+   {
+    "spot": "Pedra",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.4,
+    "swell_p": 10,
+    "swell_dir": "WNW",
+    "wind_kts": 17,
+    "wind_gust": 22,
+    "wind_dir": "W",
+    "surfers": null,
+    "people": null,
+    "note": "cam down; forecast only",
+    "erisurf": 1
+   },
+   {
+    "spot": "Lizandro",
+    "rating": "POOR",
+    "surf_min": 1.8,
+    "surf_max": 2.4,
+    "swell_h": 2.5,
+    "swell_p": 10,
+    "swell_dir": "WNW",
+    "wind_kts": 17,
+    "wind_gust": 22,
+    "wind_dir": "W",
+    "surfers": 0,
+    "people": 0,
+    "note": "layered closeouts on the sand, onshore; beach empty; 0 out",
+    "erisurf": 1
+   }
+  ]
+ },
+ {
   "run_id": 375,
   "day": "2026-11-11",
   "time": "16:41",
@@ -1667,46 +1755,6 @@
     "surfers": 0,
     "people": 20,
     "note": "near flat, shorebreak only; waders at the edge, nobody in the lineup",
-    "erisurf": 1
-   }
-  ]
- },
- {
-  "run_id": 356,
-  "day": "2026-11-07",
-  "time": "13:40",
-  "slot": "afternoon",
-  "spots": [
-   {
-    "spot": "Norte",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.9,
-    "swell_p": 6,
-    "swell_dir": "SW",
-    "wind_kts": 11,
-    "wind_gust": 14,
-    "wind_dir": "S",
-    "surfers": null,
-    "people": null,
-    "note": "no cam frames; forecast only, knee to thigh, S cross-shore",
-    "erisurf": 2
-   },
-   {
-    "spot": "Lizandro",
-    "rating": "POOR_TO_FAIR",
-    "surf_min": 0.3,
-    "surf_max": 0.6,
-    "swell_h": 0.9,
-    "swell_p": 6,
-    "swell_dir": "SW",
-    "wind_kts": 11,
-    "wind_gust": 14,
-    "wind_dir": "S",
-    "surfers": 0,
-    "people": 12,
-    "note": "near flat, tiny shorebreak only; detail crop readable, nobody in water, 1 board carrier on sand",
     "erisurf": 1
    }
   ]

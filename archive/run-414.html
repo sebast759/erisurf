@@ -73,6 +73,17 @@ h1{font-size:24px;margin:0 0 2px;letter-spacing:-.01em}
 .nav .brand{border-bottom:0;line-height:0;margin-right:2px}
 .nav .brand img{width:34px;height:34px;border-radius:50%;display:block;
   border:1px solid var(--line)}
+/* tap the logo: it opens big and round, like a profile photo on
+   Instagram/WhatsApp; tap anywhere or Esc closes (21 Nov 2026, his ask) */
+.nav{flex-wrap:wrap;row-gap:6px}
+@media(max-width:480px){.nav{gap:9px;font-size:12.5px}}
+.logobox{border:0;padding:0;background:transparent;max-width:none;max-height:none;
+  width:100vw;height:100vh;margin:0;display:none;place-items:center;cursor:zoom-out}
+.logobox[open]{display:grid;animation:lbin .18s ease-out}
+.logobox::backdrop{background:rgba(0,0,0,.82)}
+.logobox img{width:min(78vw,78vh,600px);height:auto;aspect-ratio:1;border-radius:50%;
+  box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@keyframes lbin{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
 .grid{display:grid;gap:10px;grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -413,11 +424,12 @@ figure{margin:0 0 10px}
 </style>
 <script data-goatcounter="https://erisurf.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script></head><body><div class="wrap">
-<div class="nav"><a class="brand" href="../index.html" aria-label="Ericeira Surf"><img
+<div class="nav"><a class="brand" href="../index.html" aria-label="Erisurf home"><img
  src="../icons/erisurf-logo.png" width="34" height="34" alt=""></a><a href="../index.html">Latest</a>
 <a href="../archive/index.html">Archive</a>
 <a href="../crowd.html">Crowd</a>
-<a href="../about.html">How this works</a></div>
+<a href="../about.html">How this works</a>
+<a href="../status.html">Status</a></div>
 <h1>2026-11-20 09:45</h1><p class='sub'>morning slot &middot; run 414</p><div class="report">🤔 <b>MARGINAL · Sul ★★☆☆☆ · 09:45 · 2+ surfers (quiet)</b>
 🌊 3.7m @ 13s WNW · 💨 S 15 km/h
 ↗️🟦 Rising tide: (Low 04:47) · High 10:59 · Low 17:19 · 🌅 17:22

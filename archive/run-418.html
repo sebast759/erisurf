@@ -73,6 +73,17 @@ h1{font-size:24px;margin:0 0 2px;letter-spacing:-.01em}
 .nav .brand{border-bottom:0;line-height:0;margin-right:2px}
 .nav .brand img{width:34px;height:34px;border-radius:50%;display:block;
   border:1px solid var(--line)}
+/* tap the logo: it opens big and round, like a profile photo on
+   Instagram/WhatsApp; tap anywhere or Esc closes (21 Nov 2026, his ask) */
+.nav{flex-wrap:wrap;row-gap:6px}
+@media(max-width:480px){.nav{gap:9px;font-size:12.5px}}
+.logobox{border:0;padding:0;background:transparent;max-width:none;max-height:none;
+  width:100vw;height:100vh;margin:0;display:none;place-items:center;cursor:zoom-out}
+.logobox[open]{display:grid;animation:lbin .18s ease-out}
+.logobox::backdrop{background:rgba(0,0,0,.82)}
+.logobox img{width:min(78vw,78vh,600px);height:auto;aspect-ratio:1;border-radius:50%;
+  box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@keyframes lbin{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
 .grid{display:grid;gap:10px;grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -413,11 +424,12 @@ figure{margin:0 0 10px}
 </style>
 <script data-goatcounter="https://erisurf.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script></head><body><div class="wrap">
-<div class="nav"><a class="brand" href="../index.html" aria-label="Ericeira Surf"><img
+<div class="nav"><a class="brand" href="../index.html" aria-label="Erisurf home"><img
  src="../icons/erisurf-logo.png" width="34" height="34" alt=""></a><a href="../index.html">Latest</a>
 <a href="../archive/index.html">Archive</a>
 <a href="../crowd.html">Crowd</a>
-<a href="../about.html">How this works</a></div>
+<a href="../about.html">How this works</a>
+<a href="../status.html">Status</a></div>
 <h1>2026-11-21 07:30</h1><p class='sub'>sunrise slot &middot; run 418</p><div class="report">🤔 <b>MARGINAL · Lizandro · 07:30</b>
 🌊 No forecast this run: Surfline and backup both failed
 <table class="rt"><tr><td colspan="4"><code>Ribeira  no data</code> <a href="https://www.surfline.com/surf-report/ribeira-d-ilhas/5842041f4e65fad6a7708bc2">▪️</a> <a href="https://beachcam.meo.pt/livecams/ribeira-dilhas/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/ribeira-d-ilhas">▫️</a></td></tr><tr><td colspan="4"><code>Norte    no data</code> <a href="https://www.surfline.com/surf-report/praia-do-norte/6a76019026a677d19fde7f36">▪️</a> <a href="https://beachcam.meo.pt/livecams/praia-dos-pescadores/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-hd">▫️</a> <a href="https://gosurf.fr/webcam/en/109/Ericeira-Praia-Dos-Pescadores">🔸</a></td></tr><tr><td colspan="4"><code>Sul      no data</code> <a href="https://www.surfline.com/surf-report/praia-do-sul/5fb2c2da7057d993d9d2caa3">▪️</a> <a href="https://beachcam.meo.pt/livecams/ericeira-praia-do-sul/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/ericeira-praias-sul">▫️</a> <a href="https://gosurf.fr/webcam/en/110/Ericeira-Praia-Do-Sul">🔸</a></td></tr><tr><td colspan="4"><code>Pedra    no data</code> <a href="https://www.surfline.com/surf-report/pedra-branca/584204204e65fad6a77096ae">▪️</a> <a href="https://beachcam.meo.pt/livecams/ericeira/">🔹</a> <a href="https://gosurf.fr/webcam/en/108/Ericeira-Spots-Praia-de-Ericeira">🔸</a></td></tr><tr><td colspan="4"><code>Lizandro no data</code> <a href="https://www.surfline.com/surf-report/foz-do-lizandro/5842041f4e65fad6a7708bbd">▪️</a> <a href="https://beachcam.meo.pt/livecams/foz-do-lizandro/">🔹</a> <a href="https://surftotal.com/camaras-report/ericeira/foz-do-lizandro">▫️</a> <a href="https://gosurf.fr/webcam/en/111/Ericeira-Praia-de-Foz-Do-Lizandro">🔸</a></td></tr></table><b><a href="#cams"><span class="cam-now">Cam AInalysis</span><span class="cam-old">Last cam analysis</span></a> · 07:30<span class="cam-now"> · Crowd ●●○○ (normal)</span></b>

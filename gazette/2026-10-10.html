@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ericeira surf report, Saturday 10 October 2026 · Erisurf Gazette</title>
+<link rel="icon" href="../icons/erisurf-favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/erisurf-favicon-32.png">
+<link rel="apple-touch-icon" href="../icons/erisurf-apple-touch.png">
+<meta name="description" content="Ericeira surf on Saturday 10 October 2026. Best: Ribeira d&#x27;Ilhas 4/5 at 07:41. Swell 1-1.3 m. Busiest: Ribeira d&#x27;Ilhas, 8 surfers.">
+<link rel="canonical" href="https://erisurf.com/gazette/2026-10-10.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Erisurf">
+<meta property="og:title" content="Erisurf · Ericeira surf, live">
+<meta property="og:description" content="Ericeira surf webcams and live surf report: cams read every 2 hours, surfers counted, five spots rated from Ribeira d&#x27;Ilhas to Foz do Lizandro.">
+<meta property="og:url" content="https://erisurf.com/">
+<meta property="og:image" content="https://erisurf.com/icons/erisurf-share.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" media="(prefers-color-scheme:light)" content="#f6f7f9">
+<meta name="theme-color" media="(prefers-color-scheme:dark)" content="#0f1115">
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  /* shared components (6 Nov 2026): one star, one chip, one secondary text,
+     used by the banner, the live cams, the spot cards, the plan and the report */
+  --ink2:#4b5563;--star:#c2620a;--star-off:#e2c9ae;
+  --hot-fg:#c2410c;--hot-bg:#fff3ea;--hot-bd:#fde4d0;
+  --worth-fg:#15803d;--worth-bg:#ecf8f0;--worth-bd:#d4efdd;
+  --marg-fg:#a16207;--marg-bg:#fef7e6;--marg-bd:#f8e7bd;
+  --neu-fg:#4b5563;--neu-bg:#f2f4f6;--neu-bd:#e6e9ed}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#0f1115;--panel:#171a21;--ink:#e8eaed;--muted:#9aa1ac;--line:#262b34;
+  --ink2:#c3c9d2;--star:#f59e0b;--star-off:#5c4a33;
+  --hot-fg:#fb923c;--hot-bg:rgba(249,115,22,.12);--hot-bd:rgba(249,115,22,.22);
+  --worth-fg:#4ade80;--worth-bg:rgba(34,197,94,.11);--worth-bd:rgba(34,197,94,.2);
+  --marg-fg:#fbbf24;--marg-bg:rgba(245,158,11,.11);--marg-bd:rgba(245,158,11,.2);
+  --neu-fg:#c3c9d2;--neu-bg:rgba(148,163,184,.12);--neu-bd:rgba(148,163,184,.18)}}
+.stars{display:inline-block;font-size:15px;line-height:1;letter-spacing:1px;
+  color:var(--star);white-space:nowrap;font-weight:400;margin:0}
+.stars .soff{color:var(--star-off)}
+.chip{display:inline-flex;align-items:center;gap:4px;height:21px;padding:0 9px;
+  border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:600;
+  line-height:1;white-space:nowrap;margin:0}
+.chip-hot{color:var(--hot-fg);background:var(--hot-bg);border-color:var(--hot-bd)}
+.chip-worth{color:var(--worth-fg);background:var(--worth-bg);border-color:var(--worth-bd)}
+.chip-marginal{color:var(--marg-fg);background:var(--marg-bg);border-color:var(--marg-bd)}
+.chip-skip,.cr-none{color:var(--neu-fg);background:var(--neu-bg);border-color:var(--neu-bd)}
+/* crowd: erisurf's own read, in the site turquoise; fuller lineup, fuller chip */
+/* 6 Nov 2026 (his call): no pill, bold text warming toward red as it fills,
+   same ramp as the report table's crowd words (.cw-busy / .cw-packed) */
+.chip-crowd:not(.cr-none){background:none;border-color:transparent;padding:0 2px;
+  font-size:12.5px;font-weight:700}
+.cr-quiet{color:#15803d}
+.cr-normal{color:var(--ink2)}
+.cr-busy{color:#d97706}
+.cr-packed{color:#dc2626}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .cr-quiet{color:#4ade80}
+  :root:not([data-theme=light]) .cr-busy{color:#fbbf24}
+  :root:not([data-theme=light]) .cr-packed{color:#f87171}}
+.meta{color:var(--ink2);font-size:12px;font-weight:500;white-space:nowrap}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);margin:0;padding:24px 18px 64px;
+  font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto}
+/* big screens: wider page so the three cam columns grow (6 Nov 2026) */
+@media(min-width:1400px){.wrap{max-width:1480px}}
+@media(min-width:1800px){.wrap{max-width:1720px}}
+a{color:inherit}
+h1{font-size:24px;margin:0 0 2px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 20px;font-size:14px}
+.nav{margin:0 0 22px;font-size:13px;display:flex;align-items:center;gap:14px}
+.nav a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+/* the surfer-statue mark doubles as the home button; rounded here rather than
+   baked into the file so it stays a small JPEG instead of an alpha PNG */
+.nav .brand{border-bottom:0;line-height:0;margin-right:2px}
+.nav .brand img{width:34px;height:34px;border-radius:50%;display:block;
+  border:1px solid var(--line)}
+/* tap the logo: it opens big and round, like a profile photo on
+   Instagram/WhatsApp; tap anywhere or Esc closes (21 Nov 2026, his ask) */
+.nav{flex-wrap:wrap;row-gap:6px}
+@media(max-width:480px){.nav{gap:9px;font-size:12.5px}}
+.logobox{border:0;padding:0;background:transparent;max-width:none;max-height:none;
+  width:100vw;height:100vh;margin:0;display:none;place-items:center;cursor:zoom-out}
+.logobox[open]{display:grid;animation:lbin .18s ease-out}
+.logobox::backdrop{background:rgba(0,0,0,.82)}
+.logobox img{width:min(78vw,78vh,600px);height:auto;aspect-ratio:1;border-radius:50%;
+  box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@keyframes lbin{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;min-width:0;border-top:3px solid var(--accent)}
+.card header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.card h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.size{font-size:15px;margin:0;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+/* size · stars | verdict · crowd: tight inside a group, wider between groups */
+.cline{display:flex;flex-wrap:wrap;align-items:center;gap:5px 6px;margin:5px 0 2px}
+.cline .stars{margin-right:6px}
+.cline .fc{font-size:11px;color:var(--muted);margin:0 6px 0 -2px}
+.note{color:var(--muted);font-size:12.5px;margin:2px 0}
+.runlog{color:var(--muted);font-size:11.5px;margin:0 0 6px}
+.who{margin:8px 0 4px;font-size:14px}
+.badge{font-size:10.5px;font-weight:700;letter-spacing:.04em;color:#fff;
+  padding:3px 7px;border-radius:999px;white-space:nowrap}
+h2{font-size:12.5px;font-weight:650;margin:26px 0 9px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.08em}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);
+  font-size:13px;white-space:nowrap}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.slot{display:block;font-weight:400;font-size:11px;color:var(--muted)}
+.out{margin-left:7px;color:var(--muted);font-variant-numeric:tabular-nums}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.report{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin:0 0 16px;font-size:14px;white-space:pre-wrap}
+.report pre{white-space:pre-wrap;font:12.5px/1.45 ui-monospace,Menlo,Consolas,monospace;
+  background:transparent;margin:4px 0;display:block}
+.report b{font-weight:650}
+.report s{color:var(--muted);text-decoration:none}
+/* Telegram's <code> rows: monospace so the columns align, but in the ink
+   colour (Telegram tints them blue; the site does not need to) and never
+   wrapped, so a row stays one line on a phone */
+.report code{font:13px/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre;color:var(--ink)}
+.report{overflow-x:auto}
+@media(max-width:480px){.report{padding:12px 12px;font-size:13.5px}.report code{font-size:12px}}
+.cond{background:var(--panel);border:1px solid var(--line);border-left:4px solid #0891b2;
+  border-radius:10px;padding:10px 14px;margin:0 0 16px;font-size:13.5px}
+.nocam{color:var(--muted)}
+.crowdsvg{width:100%;height:auto;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;display:block}
+.crowdsvg .cl{font-size:10px;fill:var(--muted)}
+.crowdsvg .night{stroke:var(--ink);stroke-width:1;opacity:.12}
+.mark{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--ink);font-weight:700;margin:0 1px}
+.out-yes{font-weight:700}
+.out-no{color:var(--muted);font-weight:400}
+.land{color:var(--muted);font-size:11.5px;font-weight:400}
+.cam{margin:6px 0 0;font-size:11.5px;color:var(--muted);line-height:1.7;
+  display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+.camlbl{font-weight:600;color:var(--muted);margin-right:1px}
+figure{scroll-margin-top:14px}
+figure img{max-width:100%}
+#pic-conditions img,figure:first-of-type img{max-width:720px}
+.livechart{position:relative;max-width:720px}
+/* 36h chart (9 Nov 2026): wider on desktop at the same type size; on a
+   phone it keeps a readable width and swipes sideways inside its own frame */
+#pic-conditions.c36 img,#pic-conditions.c36 .livechart{max-width:920px}
+@media(max-width:640px){#pic-conditions.c36{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #pic-conditions.c36 .livechart{width:600px}}
+/* NOW (11 Nov 2026, his ask): slate ink + sun by day, indigo + moon at night */
+.nowline{position:absolute;width:0;border-left:1.2px dashed rgba(51,65,85,.75);
+  pointer-events:none}
+.nowlbl{position:absolute;bottom:100%;left:0;margin-bottom:1px;transform:translateX(-50%);
+  font:700 10.5px/1.05 "DejaVu Sans",Verdana,sans-serif;color:#334155;
+  text-align:center;white-space:pre}
+.nowline.night{border-left-color:rgba(99,102,241,.8)}
+.nowline.night .nowlbl{color:#6366f1}
+.cam a{font-weight:700;text-decoration:none;color:var(--accent);letter-spacing:-.04em;
+  display:inline-flex;align-items:center;gap:3px}
+.camico{width:15px;height:15px;border-radius:4px;background:#fff;padding:1px;
+  box-shadow:0 0 0 1px var(--line);flex:0 0 auto}
+.note{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+figure{margin:0 0 14px}
+figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+figcaption{color:var(--muted);font-size:12px;margin-top:5px}
+/* Plan a session: the stars and the clock carry it, the words are footnotes */
+/* ONE LINE PER BLOCK (7 Oct 2026): when, stars, spot, button. The size/wind/
+   tide bits are the only part allowed to give way: they truncate, and are
+   dropped entirely on a phone, so the button never wraps under the row. */
+.plans{display:grid;gap:6px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:6px 8px 6px 10px;border-left:4px solid var(--accent);min-width:0;
+  display:flex;align-items:center;gap:8px;white-space:nowrap}
+.plan-when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.plan-when b{color:var(--ink);font-weight:650}
+.plan-stars{font-size:14px;line-height:1;letter-spacing:1px;color:var(--star)}
+.plan-spot{color:var(--ink);font-size:13px;font-weight:650}
+.plan-bits{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;
+  font-size:12.5px;color:var(--muted)}
+@media(max-width:560px){.plan-bits{visibility:hidden}}
+.plan-fc{font-size:11px;font-weight:400;color:var(--muted);margin-left:6px;
+  text-transform:none;letter-spacing:0}
+.cal{flex:none;text-decoration:none;font-size:12.5px;font-weight:650;
+  color:var(--ink);background:var(--bg);border:1px solid var(--line);
+  border-radius:8px;padding:4px 9px}
+.cal:hover{border-color:var(--accent);color:var(--accent)}
+.livehd{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 4px;margin-top:4px}
+.livehd .jump{margin-left:auto;font-size:12.5px;font-weight:650;text-transform:none;
+  letter-spacing:0;color:var(--ink);text-decoration:none;background:var(--panel);
+  border:1px solid var(--line);border-radius:8px;padding:3px 9px}
+.livehd .jump:hover{border-color:#0891b2}
+#report{scroll-margin-top:12px}
+.headline{display:block;background:var(--panel);border:1px solid var(--line);
+  border-left:4px solid #0891b2;border-radius:10px;padding:10px 14px;margin:0 0 6px;
+  font-size:16px;text-decoration:none;color:var(--ink)}
+.headline b{font-weight:700}
+.headline:not(.hb) span{color:var(--muted);font-size:13px;margin-left:4px}
+.headline .headline-sub{display:block;font-size:14px;font-weight:400;margin:4px 0 0}
+.headline .headline-sub+.headline-sub{margin-top:1px}
+@media(max-width:480px){.headline .headline-sub{font-size:13px}}
+.headline:hover{border-color:#0891b2}
+summary.headline{cursor:pointer;list-style:none}
+summary.headline::-webkit-details-marker{display:none}
+.fold{margin-bottom:6px}
+.fold .less,.fold[open] .more{display:none}
+.fold[open] .less{display:inline}
+.fold .plan-fc{display:block;margin:0 0 6px}
+@media(max-width:480px){.headline{font-size:14.5px;padding:9px 11px}}
+/* recommendation banner, three rows (6 Nov 2026) */
+.headline.hb{border-left-width:3px;padding:8px 14px 8px;font-size:13px;line-height:1.35;
+  box-shadow:none;background:var(--panel)}
+.hb .hb-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;
+  gap:2px 0;margin:0;color:var(--ink);font-size:13px}
+.hb .hb-row+.hb-row{margin-top:3px}
+.hb .hb-top{gap:5px 6px;margin-bottom:2px}
+.hb .hb-top .stars{margin:0 6px 0 4px}
+.hb .hb-tide{font-size:12.5px;color:var(--muted)}
+.hb .hb-tide .hb-t{color:var(--ink2);font-weight:600;margin:0}
+.hb .hb-ev{white-space:nowrap;margin:0;font-size:inherit;color:inherit}
+.hb .hb-tide .hb-prev{color:var(--muted);opacity:.65}
+.hb .hb-tide .hb-next{color:var(--ink);font-weight:600}
+.hb .hb-tide .hb-then{color:var(--muted)}
+/* BEST OPTIONS (7 Nov 2026): a quiet fourth row, same rhythm as TIDE */
+.hb .hb-podium{gap:2px 0;margin-top:3px}
+.hb .pd-lbl{font-size:11px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin:0}
+.hb .pd{font-size:13px;color:var(--ink2);text-decoration:none;white-space:nowrap;margin:0}
+.hb .pd-1{color:var(--ink);font-weight:600}
+.hb .pd .pd-n{color:var(--muted);font-weight:400;margin:0}
+.hb .pd .stars{font-size:12.5px;margin:0 0 0 2px;letter-spacing:0}
+.hb .pd:hover{color:#0891b2}
+.lcam[id]{scroll-margin-top:12px}
+.hb .hb-g{white-space:nowrap;margin:0 0 0 10px;font-size:inherit;color:inherit}
+.hb .hb-spot{font-size:17px;font-weight:600;color:var(--ink);margin:0 4px 0 0;
+  letter-spacing:-.01em}
+.hb .hb-time{margin:0;font-size:13px}
+/* one size for rows 2-3, crowd and timestamp (6 Nov 2026) */
+.hb .hb-row .chip-crowd{font-size:13px}
+.hb .hb-sep{color:var(--muted);opacity:.55;margin:0 7px;font-size:inherit}
+.hb .hb-past{color:var(--muted);opacity:.75;margin:0;font-size:inherit}
+.hb .hb-tide .hb-past{opacity:.7}
+.hb .hb-arrow{color:#0891b2;font-weight:700;margin:0 3px 0 0;font-size:inherit}
+.hb .hb-chev{width:7px;height:7px;margin:0 4px 3px 4px;padding:0;border:solid var(--muted);
+  border-width:0 1.6px 1.6px 0;transform:rotate(45deg);transition:transform .15s}
+.fold[open] .hb .hb-chev{transform:rotate(-135deg);margin:3px 4px 0 4px}
+/* labelled open/close action (15 Nov 2026, his mockup): plain text + one
+   thin v, centred in the banner on the Best spots line; no chip */
+summary.headline.hb{position:relative}
+.hb .hb-more{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);
+  display:inline-flex;align-items:center;gap:10px;margin:0;font-size:13px;
+  font-weight:650;color:var(--ink);white-space:nowrap}
+.hb .hb-more span{margin:0;font-size:inherit;color:inherit}
+.hb .hb-more .hb-v{width:8px;height:8px;border:solid currentColor;
+  border-width:0 1.8px 1.8px 0;transform:rotate(45deg);margin:0 2px 4px 0;
+  transition:transform .15s}
+.fold[open] .hb .hb-more .hb-v{transform:rotate(-135deg);margin:4px 2px 0 0}
+summary.headline.hb:hover .hb-more{color:#0891b2}
+@media(max-width:760px){.hb .hb-more{position:static;transform:none;display:flex;
+  justify-content:center;margin:7px 0 1px}}
+@media(max-width:480px){.headline.hb{padding:7px 11px 6px}.hb .hb-spot{font-size:16px}}
+/* open, the headline and the report are ONE frame (4 Nov 2026) */
+.fold[open]{background:var(--panel);border:1px solid var(--line);
+  border-left:4px solid #0891b2;border-radius:10px;margin-bottom:16px}
+.fold[open] .headline{border:0;border-radius:10px 10px 0 0;margin:0;
+  border-bottom:1px solid var(--line)}
+.fold[open] .report{border:0;border-radius:0 0 10px 10px;margin:0;
+  padding-left:14px;padding-right:14px}
+/* the SPOTS and CAM rows as tables, in the page font */
+.report .rt{width:auto;min-width:0;border:0;background:none;border-radius:0;
+  margin:2px 0 8px;white-space:normal}
+.report .rt th,.report .rt td{border:0;padding:3px 14px 3px 0;font-size:14px;
+  vertical-align:middle;white-space:nowrap}
+.report .rt th{font-weight:650;text-align:left;text-transform:none;letter-spacing:0}
+.report .rt .st{letter-spacing:1px;color:var(--star)}
+.report .rt .num{font-variant-numeric:tabular-nums}
+.report .rt .adj{color:var(--muted);font-size:13px}
+.report .rt .n{font-weight:650}
+.report .rt .cw{font-size:12px;color:var(--muted)}
+.report .rt .cw-busy{color:#d97706}
+.report .rt .cw-packed{color:#dc2626}
+.report .rt .logos a{display:inline-flex;margin-right:5px;vertical-align:middle}
+.report .rt .camico{width:18px;height:18px}
+@media(max-width:480px){.report .rt th,.report .rt td{font-size:13px;padding-right:9px}}
+/* merged 7-column SPOTS+CAM table vs the two originals (8 Nov 2026): the
+   merged one is laid out off-screen to be measured, shown only when it fits */
+.report .rt-wrap{position:relative;overflow:hidden}
+.report .rt-merged{position:absolute;left:0;top:0;visibility:hidden;pointer-events:none;
+  white-space:nowrap}
+.report .rt-wrap.merged .rt-merged{position:static;visibility:visible;pointer-events:auto}
+.report .rt-wrap.merged .rt-stack{display:none}
+.report .rt-merged .rt-7{width:max-content}
+.report .rt-7 td.g2{padding-left:16px;border-left:1px solid var(--line)}
+.report .rt-cap{white-space:normal;margin:6px 0 2px}
+/* outlook cards + tide chart, top of the open banner (9 Nov 2026) */
+.ol{padding:8px 14px 2px}
+.ol-hd{font-size:10.5px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 5px;display:flex;flex-wrap:wrap;gap:0 8px}
+.ol-hd .ol-t{color:var(--ink2)}
+.ol-hd .ol-s:before{content:"·";margin-right:8px;opacity:.55}
+/* 9 Nov 2026 (his pass 2): cards grouped left at ~190px, chart max 600px,
+   open content only as wide as it needs; phones get three equal columns */
+.ol-cards{display:grid;grid-template-columns:repeat(3,190px);gap:8px}
+.ol-cards[hidden]{display:none}
+.fold[open] .report{max-width:900px}
+.olc{display:flex;flex-direction:column;min-width:0;padding:5px 8px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg)}
+.olc span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3}
+.olc-h{font-size:9.5px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.olc-m{font-size:15px;font-weight:650;color:var(--ink);font-variant-numeric:tabular-nums}
+.olc-i{font-size:11.5px;color:var(--ink2)}
+.ol-na{font-size:12px;color:var(--muted);margin:2px 0 6px}
+.tidec-t[hidden]{display:none}
+.tidec-t{font-size:10px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin:7px 0 0;line-height:1.2}
+.tidec{margin:0;height:84px;max-width:600px;--tc-a:#cfdcf3;--tc-l:#5b7fc4}
+.tidec[hidden]{display:none}
+.tidec svg{display:block;overflow:visible}
+.tidec .tc-a{fill:var(--tc-a);opacity:.6}
+.tidec .tc-l{fill:none;stroke:var(--tc-l);stroke-width:1.6}
+.tidec .tc-d{fill:var(--tc-l)}
+.tidec .tc-x{font-size:11.5px;fill:var(--ink2)}
+.tidec .tc-n{stroke:#0891b2;stroke-width:1.2;stroke-dasharray:3 2}
+.tidec .tc-nl{font-size:10px;font-weight:700;fill:#0891b2;letter-spacing:.05em}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .tidec{--tc-a:rgba(91,127,196,.35);--tc-l:#8fa9e0}}
+@media(max-width:640px){.ol-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){.ol{padding:7px 11px 2px}.olc{padding:4px 6px}
+  .olc-m{font-size:13.5px}.olc-i{font-size:10.5px}.olc-h{font-size:9px}}
+.hb .pd-none{color:var(--muted);font-weight:500}
+.olc .tn-bad{color:#b91c1c}.olc .tn-mid{color:var(--marg-fg)}.olc .tn-good{color:var(--worth-fg)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .olc .tn-bad{color:#f87171}}
+/* banner states (8 Nov 2026): live / fc / stale / night, set by STATE_JS */
+/* page-wide (8 Nov 2026): STATE_JS sets html[data-state]; the banner and
+   the live-cam tiles both read it. Pages without the banner (archive) carry
+   no state and show their stored run as is. */
+.st{display:contents}
+html[data-state]:not([data-state=live]) .st-live{display:none}
+html:not([data-state]) .st-notlive,html[data-state=live] .st-notlive{display:none}
+html:not([data-state]) #report .st:not(.st-live),
+html[data-state]:not([data-state=fc]) .st-fc,html[data-state]:not([data-state=night]) .st-night,
+html[data-state]:not([data-state=stale]) .st-stale{display:none}
+html[data-state]:not([data-state=live]) .hb-podium.st-notlive{display:flex}
+html:not([data-state]) .hb-podium.st-live,html[data-state=live] .hb-podium.st-live{display:flex}
+.cam-old{display:none}
+html[data-state]:not([data-state=live]) .cam-old{display:inline}
+html[data-state]:not([data-state=live]) .cam-now{display:none}
+.chip-night{color:#475569;background:#e8eef6;border-color:#d3dce8}
+.chip-stale{color:#92400e;background:#fef3c7;border-color:#fcd9a0}
+@media (prefers-color-scheme:dark){
+ .chip-night{color:#cbd5e1;background:#1e293b;border-color:#334155}
+ .chip-stale{color:#fcd34d;background:#3a2a0b;border-color:#5c4210}}
+html{scroll-behavior:smooth}
+/* Live cams: a 3-column matrix of big tiles, 2 on a tablet, 1 on a phone */
+.live{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:16px}
+@media(max-width:900px){.live{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.live{grid-template-columns:1fr}}
+.lcam{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;border-top:3px solid var(--accent);min-width:0}
+.lcam header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  padding:8px 11px 0;font-size:14px;font-weight:600;letter-spacing:-.01em}
+.lcam header a{color:var(--muted);font-weight:400;text-decoration:none;font-size:12px;
+  white-space:nowrap}
+.lcam header a:hover{color:var(--accent)}
+.lcam .vid{position:relative;aspect-ratio:16/9;background:#111}
+.lcam video,.lcam .vid img{width:100%;height:100%;object-fit:cover;display:block}
+.lcam .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.lcam .tag{position:absolute;right:8px;top:8px;font-size:11px;color:#fff;
+  background:rgba(0,0,0,.55);padding:2px 7px;border-radius:999px;pointer-events:none}
+.lcam .off{display:none;position:absolute;inset:0;align-items:center;
+  justify-content:center;color:#9aa1ac;font-size:12.5px}
+.lcam.offline .off{display:flex}
+.lcam.offline video,.lcam.offline img,.lcam.offline .tag{visibility:hidden}
+.lcam .resume{display:none;position:absolute;inset:0;width:100%;align-items:center;
+  justify-content:center;border:0;background:rgba(0,0,0,.6);color:#fff;
+  font:inherit;font-size:12.5px;cursor:pointer}
+.lcam.stopped .resume{display:flex}
+.lcam.stopped .tag{visibility:hidden}
+.lcam .cline{margin:0;padding:5px 11px 8px}
+.lcam header+.vid{margin-top:8px}
+.lfoot{padding:6px 11px 8px;font-size:12px;color:var(--muted)}
+.lmore{display:block;margin-top:1px}
+.lmore a{color:var(--muted);text-decoration:none;margin-left:6px;white-space:nowrap}
+.lmore a:hover{color:var(--accent)}
+/* each spot card titles its crowd photo, directly above it */
+.shot{margin:0 0 22px;scroll-margin-top:14px}
+.shot figure{margin:6px 0 0}
+.shot .card{border-top-width:4px}
+
+h2{font-size:14px;font-weight:700;color:var(--ink2);text-transform:none;
+  letter-spacing:-.005em;margin:20px 0 8px}
+h2 .plan-fc{font-size:12px}
+#pic-conditions img{border:0;border-radius:6px}
+#pic-conditions.c36 img,#pic-conditions.c36 .livechart{max-width:750px}
+/* 72h chart behind a toggle (11 Nov 2026): twice the 36h width, shown whole
+   on a wide screen, scrolling sideways only where the page is narrower */
+/* the toggle is a small ">>" at the right edge of the chart (his ask) */
+#pic-conditions.c36{position:relative}
+.c72 summary{cursor:pointer;list-style:none;position:absolute;top:42%;z-index:3;
+  left:min(750px,100%);transform:translateX(calc(-100% - 6px));
+  font-size:13px;font-weight:700;line-height:1;color:#0891b2;padding:6px 8px;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);
+  box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.c72 summary:hover{background:#0891b2;color:#fff}
+.c72[open] summary{left:min(1500px,100%)}
+.c72 summary::-webkit-details-marker{display:none}
+.c72 .c72-close,.c72[open] .c72-open{display:none}
+.c72[open] .c72-close{display:inline}
+.c72 .scroll72{max-width:1500px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+/* exactly twice the 36h chart's displayed width (min(750px,100%)), so both
+   charts have the same height and ">>" does not make the page jump */
+#pic-conditions.c36 .c72 .livechart{width:calc(2 * min(750px, 100%));max-width:none}
+#pic-conditions.c36 .c72 img{max-width:none;width:100%}
+@media(max-width:640px){#pic-conditions.c36 .c72 .livechart{width:1200px}}
+/* open, the 72h chart takes the 36h chart's place (its first half repeats it) */
+#pic-conditions:has(.c72[open]) > .livechart{display:none}
+/* accents at about 66% (his pass 6): present, never loud */
+.lcam{border-top:2px solid color-mix(in srgb,var(--accent) 66%,transparent)}
+.card,.shot .card{border-top:2px solid color-mix(in srgb,var(--accent) 66%,transparent)}
+.headline,.fold[open]{border-left-color:color-mix(in srgb,#0891b2 66%,transparent)}
+.headline:hover{border-color:color-mix(in srgb,#0891b2 66%,transparent)}
+.olc{border-color:color-mix(in srgb,var(--line) 66%,transparent)}
+.live{margin-bottom:10px}
+figure{margin:0 0 10px}
+</style>
+<script data-goatcounter="https://erisurf.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script></head><body><div class="wrap">
+<div class="nav"><a class="brand" href="../index.html" aria-label="Erisurf home"><img
+ src="../icons/erisurf-logo.png" width="34" height="34" alt=""></a><a href="../index.html">Latest</a>
+<a href="../archive/index.html">Archive</a>
+<a href="../gazette/index.html">Gazette</a>
+<a href="../crowd.html">Crowd Index</a>
+<a href="../power.html">Power outage</a>
+<a href="../logs.html">Logs</a>
+<a href="../about.html">About</a></div>
+<style>
+.gz-lead{font-size:17px;line-height:1.55;margin:0 0 18px}
+.gz-kpis{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.gz-kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
+.gz-kpi b{display:block;font-size:20px;line-height:1.15}
+.gz-kpi span{color:var(--muted);font-size:12px}
+.gz-spot{margin:0 0 18px}
+.gz-spot h3{font-size:16px;margin:0 0 4px}
+.gz-spot ul{margin:4px 0 0;padding-left:18px}
+.gz-spot li{margin:0 0 2px}
+.gz-spot .t{color:var(--muted);font-variant-numeric:tabular-nums}
+.gz-pn{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;font-size:14px}
+.gz-list{list-style:none;padding:0;margin:0}
+.gz-list li{padding:7px 0;border-bottom:1px solid var(--line)}
+.gz-list .d{display:inline-block;min-width:150px;font-weight:600}
+.gz-list .s{color:var(--muted);font-size:13px}
+h2{font-size:17px;margin:26px 0 10px}
+</style>
+<h1>Ericeira surf · Saturday 10 October 2026</h1>
+<p class="sub">Erisurf Gazette: the day in surf at Ribeira d'Ilhas, Pedra Branca,
+Praia do Norte, Praia do Sul and Foz do Lizandro, from the webcams and the forecast.</p>
+<p class="gz-lead">The best of the day in Ericeira was <b>Ribeira d'Ilhas</b>, ★★★★ at 07:41 (1 m swell at 7 s from the NNW, offshore wind N 24 km/h): worth surfing. Swell 1 m to 1.3 m through the day, wind 19 to 28 km/h. Busiest lineup: Ribeira d'Ilhas, 8 surfers at 07:41.</p>
+<div class="gz-kpis"><div class="gz-kpi"><b><span class="stars">★★★★</span></b><span>best: Ribeira d'Ilhas at 07:41</span></div><div class="gz-kpi"><b>1–1.3 m</b><span>swell</span></div><div class="gz-kpi"><b>19–28 km/h</b><span>wind</span></div><div class="gz-kpi"><b>8</b><span>surfers max, Ribeira d'Ilhas</span></div><div class="gz-kpi"><b>5</b><span>reports</span></div></div>
+<h2>Through the day</h2>
+<div class="scroll"><table><thead><tr><th>Time</th><th>Swell</th><th>Wind</th><th>Best spot</th><th>Surfers out</th></tr></thead><tbody><tr><td>07:41</td><td>1 m · 7 s NNW</td><td>N 24 km/h</td><td>Ribeira d'Ilhas <span class="stars">★★★★</span></td><td>8</td></tr><tr><td>10:41</td><td>1.3 m · 7 s NNW</td><td>N 19 km/h</td><td>Ribeira d'Ilhas <span class="stars">★★★</span></td><td>12</td></tr><tr><td>13:41</td><td>1.3 m · 7 s NNW</td><td>NNW 26 km/h</td><td>Pedra Branca <span class="stars">★★</span></td><td>7</td></tr><tr><td>16:40</td><td>1.1 m · 7 s NNW</td><td>N 28 km/h</td><td>Ribeira d'Ilhas <span class="stars">★★</span></td><td>0</td></tr><tr><td>18:40</td><td>1.1 m · 7 s NNW</td><td>N 26 km/h</td><td>Ribeira d'Ilhas <span class="stars">★★</span></td><td>0</td></tr></tbody></table></div>
+<h2>Spot by spot, as the cams saw it</h2>
+<div class="gz-spot"><h3>Ribeira d'Ilhas</h3><div class="meta">best <span class="stars">★★★★</span> · up to 8 surfers</div><ul><li><span class="t">07:41</span> Small clean offshore lines, two riding · 8 out</li><li><span class="t">10:41</span> Small clean offshore lines, one riding · 3 out</li><li><span class="t">13:41</span> Tiny and wind-chopped, cross-shore</li><li><span class="t">16:40</span> Small clean line seen on the wide view, offshore</li><li><span class="t">18:40</span> Small clean lines, offshore-groomed but tiny</li></ul></div><div class="gz-spot"><h3>Pedra Branca</h3><div class="meta">best <span class="stars">★★</span> · up to 7 surfers</div><ul><li><span class="t">07:41</span> Small crumbly whitewater over the reef; one unclear dark mark in the foam, nobody clearly out; one person on the rocks</li><li><span class="t">10:41</span> Crumbly whitewater over the reef, no clean wall; nobody in the water on the detail crop; one person on the rocks</li><li><span class="t">13:41</span> Crumbly peak over the reef, two riding one wave; ~7 out on the detail crop; a few people on the headland · 7 out</li><li><span class="t">16:40</span> Wind-chopped with whitecaps, one small wave crumbling by the rocks; nobody resolved among the whitecaps and glare; two on the headland</li><li><span class="t">18:40</span> Small crumbly waves over the reef, wind-textured</li></ul></div><div class="gz-spot"><h3>Praia do Norte</h3><div class="meta">best <span class="stars">★</span></div></div><div class="gz-spot"><h3>Praia do Sul</h3><div class="meta">best <span class="stars">★</span> · up to 1 surfer</div><ul><li><span class="t">07:41</span> Near-flat, lines passing unbroken, breaking only on the rocks; one dark speck inside, too small to call a surfer</li><li><span class="t">10:41</span> Near-flat, lines passing unbroken, breaking only on the rocks · 1 out</li><li><span class="t">13:41</span> Near-flat, lines passing unbroken, breaking only on the rocks; nobody in the water on the detail crop</li><li><span class="t">16:40</span> Near-flat, lines passing unbroken, breaking only on the rocks; nobody in the water on the detail crop</li><li><span class="t">18:40</span> Near-flat, lines passing unbroken, breaking only on the rocks; nobody in the water on the detail crop</li></ul></div><div class="gz-spot"><h3>Foz do Lizandro</h3><div class="meta">best <span class="stars">★★</span> · up to 8 surfers</div><ul><li><span class="t">07:41</span> Closeout shorebreak on the sand; nobody in the water, ~3 at the water&#x27;s edge, one walking off with a board</li><li><span class="t">10:41</span> Small peaks off the rocks and a shorebreak · 8 out</li><li><span class="t">13:41</span> Wind-chopped, shorebreak and whitecaps only; cam too wide to count, nobody resolved in the water; two carrying boards on the sand</li><li><span class="t">16:40</span> Wind-chopped, shorebreak and whitecaps only; cam too wide to count, nobody resolved in the water</li><li><span class="t">18:40</span> Shorebreak only, backlit by low sun; cam too wide and glared to count, nobody resolved in the water; two at the waterline</li></ul></div>
+<div class="gz-pn"><a href="2026-10-09.html">← Fri 09 Oct</a><a href="index.html">All days</a><a href="2026-10-11.html">Sun 11 Oct →</a></div>
+</div></body></html>

@@ -247,8 +247,7 @@ summary.headline::-webkit-details-marker{display:none}
 /* labelled open/close action (15 Nov 2026, his mockup): plain text + one
    thin v, centred in the banner on the Best spots line; no chip */
 summary.headline.hb{position:relative}
-.hb .hb-more{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);
-  display:inline-flex;align-items:center;gap:10px;margin:0;font-size:13px;
+.hb .hb-more{display:inline-flex;align-items:center;gap:10px;margin:0 0 0 36px;font-size:13px;
   font-weight:650;color:var(--ink);white-space:nowrap}
 .hb .hb-more span{margin:0;font-size:inherit;color:inherit}
 .hb .hb-more .hb-v{width:8px;height:8px;border:solid currentColor;
@@ -256,7 +255,7 @@ summary.headline.hb{position:relative}
   transition:transform .15s}
 .fold[open] .hb .hb-more .hb-v{transform:rotate(-135deg);margin:4px 2px 0 0}
 summary.headline.hb:hover .hb-more{color:#0891b2}
-@media(max-width:760px){.hb .hb-more{position:static;transform:none;display:flex;
+@media(max-width:760px){.hb .hb-more{display:flex;flex-basis:100%;
   justify-content:center;margin:7px 0 1px}}
 @media(max-width:480px){.headline.hb{padding:7px 11px 6px}.hb .hb-spot{font-size:16px}}
 /* open, the headline and the report are ONE frame (4 Nov 2026) */

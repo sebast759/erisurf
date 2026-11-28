@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://erisurf.com/</loc><lastmod>2026-11-27</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
-<url><loc>https://erisurf.com/crowd.html</loc><lastmod>2026-11-27</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
-<url><loc>https://erisurf.com/power.html</loc><lastmod>2026-11-27</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-<url><loc>https://erisurf.com/archive/index.html</loc><lastmod>2026-11-27</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
-<url><loc>https://erisurf.com/about.html</loc><lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-<url><loc>https://erisurf.com/gazette/index.html</loc><lastmod>2026-11-27</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://erisurf.com/</loc><lastmod>2026-11-28</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+<url><loc>https://erisurf.com/crowd.html</loc><lastmod>2026-11-28</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+<url><loc>https://erisurf.com/power.html</loc><lastmod>2026-11-28</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+<url><loc>https://erisurf.com/archive/index.html</loc><lastmod>2026-11-28</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+<url><loc>https://erisurf.com/about.html</loc><lastmod>2026-11-28</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+<url><loc>https://erisurf.com/gazette/index.html</loc><lastmod>2026-11-28</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
 <url><loc>https://erisurf.com/gazette/2026-08-27.html</loc><lastmod>2026-08-27</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://erisurf.com/gazette/2026-08-28.html</loc><lastmod>2026-08-28</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://erisurf.com/gazette/2026-08-29.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
@@ -96,4 +96,5 @@
 <url><loc>https://erisurf.com/gazette/2026-11-25.html</loc><lastmod>2026-11-25</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://erisurf.com/gazette/2026-11-26.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://erisurf.com/gazette/2026-11-27.html</loc><lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+<url><loc>https://erisurf.com/gazette/2026-11-28.html</loc><lastmod>2026-11-28</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 </urlset>
